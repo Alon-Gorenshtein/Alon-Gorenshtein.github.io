@@ -15,7 +15,7 @@ DO  - 10.1093/jamia/ocag164
 UR  - https://doi.org/10.1093/jamia/ocag164
 JO  - Journal of the American Medical Informatics Association
 M1  - ocag164
-ER  - 
+ER  -
 
 TY  - UNPB
 ID  - litbench
@@ -28,7 +28,7 @@ PY  - 2026
 DO  - 10.64898/2026.09.17.26363288
 UR  - https://doi.org/10.64898/2026.09.17.26363288
 N1  - medRxiv preprint; not certified by peer review
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - prospective-emergency-department-ai
@@ -48,7 +48,7 @@ VL  - 32
 IS  - 10
 SP  - 3741
 EP  - 3747
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - command-following
@@ -63,7 +63,7 @@ PY  - 2026
 DO  - 10.1007/s12028-026-02624-x
 UR  - https://doi.org/10.1007/s12028-026-02624-x
 JO  - Neurocritical Care
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - llm-brain-computer-interfaces
@@ -80,7 +80,7 @@ JO  - Biomedical Physics & Engineering Express
 VL  - 12
 IS  - 3
 SP  - 035077
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - clinical-ai-evaluation
@@ -102,7 +102,7 @@ VL  - 32
 IS  - 6
 SP  - 1948
 EP  - 1949
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - neurological-clinical-reasoning
@@ -118,7 +118,7 @@ JO  - PLOS Digital Health
 VL  - 4
 IS  - 12
 SP  - e0001106
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - inspire
@@ -134,7 +134,7 @@ UR  - https://doi.org/10.1016/j.clinph.2025.2110792
 JO  - Clinical Neurophysiology
 VL  - 177
 SP  - 2110792
-ER  - 
+ER  -
 
 TY  - UNPB
 ID  - clinical-ai-agents-review
@@ -148,7 +148,7 @@ PY  - 2025
 DO  - 10.1101/2025.08.22.25334232
 UR  - https://doi.org/10.1101/2025.08.22.25334232
 N1  - medRxiv preprint; not certified by peer review
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - emg-randomized-trial
@@ -168,7 +168,7 @@ JO  - Journal of Neurology
 VL  - 272
 IS  - 9
 M1  - 586
-ER  - 
+ER  -
 
 TY  - JOUR
 ID  - literas
@@ -184,4 +184,4 @@ UR  - https://doi.org/10.1016/j.compbiomed.2025.110363
 JO  - Computers in Biology and Medicine
 VL  - 192
 SP  - 110363
-ER  - 
+ER  -
