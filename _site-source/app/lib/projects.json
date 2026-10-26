@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "literas",
+    "name": "LITERAS",
+    "description": "A multi-agent framework for biomedical literature review and citation retrieval. The public repository accompanies the 2025 paper in Computers in Biology and Medicine.",
+    "doi": "10.1016/j.compbiomed.2025.110363",
+    "repo": "https://github.com/Alon-Gorenshtein/LITERAS",
+    "status": "Journal publication",
+    "context": "The paper evaluates reference retrieval and literature-review generation. Consult the publication for its comparison systems, evaluation design, and limitations."
+  },
+  {
+    "slug": "command-following",
+    "name": "Bedside command-following after acute brain injury",
+    "description": "Analysis code for the study of recovery and instability of bedside command-following, published in Neurocritical Care.",
+    "doi": "10.1007/s12028-026-02624-x",
+    "repo": "https://github.com/Alon-Gorenshtein/study_command_following",
+    "status": "Journal publication",
+    "context": "The repository describes the analysis pipeline and access requirements for the source ICU datasets. Raw patient data are not distributed in the repository."
+  },
+  {
+    "slug": "litbench",
+    "name": "LitBench",
+    "description": "A benchmark for retrieval-grounded, multi-paper evidence synthesis in epilepsy, with a public repository maintained by Goldenholz Lab.",
+    "doi": "10.64898/2026.09.17.26363288",
+    "repo": "https://github.com/GoldenholzLab/LitBench",
+    "status": "Preprint",
+    "context": "The linked medRxiv preprint tests identifying source papers, retrieving supporting passages, combining evidence, and abstaining when evidence is absent. The work is a research benchmark."
+  }
+]

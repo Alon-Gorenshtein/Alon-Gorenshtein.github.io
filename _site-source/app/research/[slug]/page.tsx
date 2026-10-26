@@ -38,7 +38,7 @@ export default async function ResearchPage({ params }: Props) {
         <p className="research-updated">Research summary updated October 26, 2026.</p>
       </article>
       <aside className="research-related"><h2>Explore related research</h2>{researchPages.filter(p => p.slug !== page.slug).map(p => <a key={p.slug} href={`/research/${p.slug}/`}>{p.title} →</a>)}</aside>
-      <p><a href="https://github.com/Alon-Gorenshtein">GitHub</a> · <a href="https://orcid.org/0009-0000-7542-8608">ORCID</a> · <a href="https://scholar.google.com/citations?user=jwe8TyoAAAAJ">Google Scholar</a></p>
+      <p><a href="/publications/">Publications and citations</a> · <a href="/projects/">Research software</a> · <a href="https://github.com/Alon-Gorenshtein">GitHub</a> · <a href="https://orcid.org/0009-0000-7542-8608">ORCID</a> · <a href="https://scholar.google.com/citations?user=jwe8TyoAAAAJ">Google Scholar</a></p>
     </main>
     <footer className="research-page-footer"><a href="/">Alon Gorenshtein, MD</a><a href="/#contact">Contact and collaboration</a></footer>
   </>;

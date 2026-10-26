@@ -1,7 +1,8 @@
-_site-source/node_modules/
+_site-source/node_modules
 _site-source/dist/
 _site-source/github-pages/
 _site-source/.wrangler/
 _site-source/.vite/
 _site-source/.next/
 _site-source/*.tsbuildinfo
+/.vite/

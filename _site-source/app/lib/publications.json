@@ -1,0 +1,457 @@
+[
+  {
+    "slug": "small-language-models",
+    "title": "Small language models in clinical medicine: a systematic review of performance, safety, and deployment feasibility",
+    "doi": "10.1093/jamia/ocag164",
+    "year": 2026,
+    "date": "2026-10-01",
+    "journal": "Journal of the American Medical Informatics Association",
+    "status": "Journal publication",
+    "authors": [
+      {
+        "given": "Alon",
+        "family": "Gorenshtein"
+      },
+      {
+        "given": "Mahmud",
+        "family": "Omar"
+      },
+      {
+        "given": "Yiftach",
+        "family": "Barash"
+      },
+      {
+        "given": "Jonathan B",
+        "family": "Kruskal"
+      },
+      {
+        "given": "Muneeb",
+        "family": "Ahmed"
+      },
+      {
+        "given": "Olga R",
+        "family": "Brook"
+      },
+      {
+        "given": "Ben",
+        "family": "Illigens"
+      },
+      {
+        "given": "Girish N",
+        "family": "Nadkarni"
+      },
+      {
+        "given": "Eyal",
+        "family": "Klang"
+      }
+    ],
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "articleNumber": "ocag164",
+    "code": "",
+    "research": "/research/clinical-ai-safety/"
+  },
+  {
+    "slug": "litbench",
+    "title": "LitBench: A Benchmark for Retrieval-Grounded Multi-Paper Evidence Synthesis in Epilepsy",
+    "doi": "10.64898/2026.09.17.26363288",
+    "year": 2026,
+    "date": "2026-09-23",
+    "journal": "medRxiv",
+    "status": "Preprint",
+    "authors": [
+      {
+        "given": "Alon",
+        "family": "Gorenshtein"
+      },
+      {
+        "given": "Tianyu",
+        "family": "Zhang"
+      },
+      {
+        "given": "M. Brandon",
+        "family": "Westover"
+      },
+      {
+        "given": "Daniel M.",
+        "family": "Goldenholz"
+      }
+    ],
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "articleNumber": "",
+    "code": "https://github.com/GoldenholzLab/LitBench",
+    "research": ""
+  },
+  {
+    "slug": "prospective-emergency-department-ai",
+    "title": "Prospective evaluation of a large language model clinical decision support system in the emergency department",
+    "doi": "10.1038/s41591-026-04601-5",
+    "year": 2026,
+    "date": "2026-08-19",
+    "journal": "Nature Medicine",
+    "status": "Journal publication",
+    "authors": [
+      {
+        "given": "Liron",
+        "family": "Leibovitch"
+      },
+      {
+        "given": "Adi",
+        "family": "Ahituv"
+      },
+      {
+        "given": "Alon",
+        "family": "Gorenshtein"
+      },
+      {
+        "given": "Dvir",
+        "family": "Aran"
+      },
+      {
+        "given": "Moran",
+        "family": "Sorka"
+      },
+      {
+        "given": "Keren",
+        "family": "Miron"
+      },
+      {
+        "given": "Shahar",
+        "family": "Shelly"
+      }
+    ],
+    "volume": "32",
+    "issue": "10",
+    "pages": "3741-3747",
+    "articleNumber": "",
+    "code": "",
+    "research": "/research/clinical-ai-safety/"
+  },
+  {
+    "slug": "command-following",
+    "title": "The Unsteady Return of Bedside Motor Command-Following After Acute Brain Injury",
+    "doi": "10.1007/s12028-026-02624-x",
+    "year": 2026,
+    "date": "2026-07-29",
+    "journal": "Neurocritical Care",
+    "status": "Journal publication",
+    "authors": [
+      {
+        "given": "Alon",
+        "family": "Gorenshtein"
+      },
+      {
+        "given": "Yosef",
+        "family": "Adiniaev"
+      },
+      {
+        "given": "Mahmud",
+        "family": "Omar"
+      },
+      {
+        "given": "Yiftach",
+        "family": "Barash"
+      },
+      {
+        "given": "Eyal",
+        "family": "Klang"
+      },
+      {
+        "given": "Oved",
+        "family": "Daniel"
+      }
+    ],
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "articleNumber": "",
+    "code": "https://github.com/Alon-Gorenshtein/study_command_following",
+    "research": "/research/neurocritical-care/"
+  },
+  {
+    "slug": "llm-brain-computer-interfaces",
+    "title": "Large language models integrated into brain–computer interfaces for communication and control: a systematic review",
+    "doi": "10.1088/2057-1976/ae737b",
+    "year": 2026,
+    "date": "2026-06-01",
+    "journal": "Biomedical Physics & Engineering Express",
+    "status": "Journal publication",
+    "authors": [
+      {
+        "given": "Alon",
+        "family": "Gorenshtein"
+      },
+      {
+        "given": "Mahmud",
+        "family": "Omar"
+      },
+      {
+        "given": "Yiftach",
+        "family": "Barash"
+      },
+      {
+        "given": "Girish N",
+        "family": "Nadkarni"
+      },
+      {
+        "given": "Eyal",
+        "family": "Klang"
+      }
+    ],
+    "volume": "12",
+    "issue": "3",
+    "pages": "035077",
+    "articleNumber": "",
+    "code": "",
+    "research": "/research/brain-computer-interfaces/"
+  },
+  {
+    "slug": "clinical-ai-evaluation",
+    "title": "How to meaningfully evaluate AI in clinical medicine",
+    "doi": "10.1038/s41591-026-04350-5",
+    "year": 2026,
+    "date": "2026-04-23",
+    "journal": "Nature Medicine",
+    "status": "Journal publication",
+    "authors": [
+      {
+        "given": "Mahmud",
+        "family": "Omar"
+      },
+      {
+        "given": "Reem",
+        "family": "Agbareia"
+      },
+      {
+        "given": "Alon",
+        "family": "Gorenshtein"
+      },
+      {
+        "given": "Ashwin",
+        "family": "Ramaswamy"
+      },
+      {
+        "given": "Ankit",
+        "family": "Sakhuja"
+      },
+      {
+        "given": "Yiftach",
+        "family": "Barash"
+      },
+      {
+        "given": "Daniel S. W.",
+        "family": "Ting"
+      },
+      {
+        "given": "Eyal",
+        "family": "Klang"
+      },
+      {
+        "given": "Girish N.",
+        "family": "Nadkarni"
+      }
+    ],
+    "volume": "32",
+    "issue": "6",
+    "pages": "1948-1949",
+    "articleNumber": "",
+    "code": "",
+    "research": "/research/clinical-ai-safety/"
+  },
+  {
+    "slug": "neurological-clinical-reasoning",
+    "title": "A multi-agent approach to neurological clinical reasoning",
+    "doi": "10.1371/journal.pdig.0001106",
+    "year": 2025,
+    "date": "2025-12-04",
+    "journal": "PLOS Digital Health",
+    "status": "Journal publication",
+    "authors": [
+      {
+        "given": "Moran",
+        "family": "Sorka"
+      },
+      {
+        "given": "Alon",
+        "family": "Gorenshtein"
+      },
+      {
+        "given": "Dvir",
+        "family": "Aran"
+      },
+      {
+        "given": "Shahar",
+        "family": "Shelly"
+      }
+    ],
+    "volume": "4",
+    "issue": "12",
+    "pages": "e0001106",
+    "articleNumber": "",
+    "code": "",
+    "research": "/research/clinical-ai-safety/"
+  },
+  {
+    "slug": "inspire",
+    "title": "Agent-guided AI-powered interpretation and reporting of nerve conduction studies and EMG (INSPIRE)",
+    "doi": "10.1016/j.clinph.2025.2110792",
+    "year": 2025,
+    "date": "2025-09",
+    "journal": "Clinical Neurophysiology",
+    "status": "Journal publication",
+    "authors": [
+      {
+        "given": "Alon",
+        "family": "Gorenshtein"
+      },
+      {
+        "given": "Moran",
+        "family": "Sorka"
+      },
+      {
+        "given": "Mohamed",
+        "family": "Khateb"
+      },
+      {
+        "given": "Dvir",
+        "family": "Aran"
+      },
+      {
+        "given": "Shahar",
+        "family": "Shelly"
+      }
+    ],
+    "volume": "177",
+    "issue": "",
+    "pages": "2110792",
+    "articleNumber": "2110792",
+    "code": "",
+    "research": "/research/clinical-neurophysiology/"
+  },
+  {
+    "slug": "clinical-ai-agents-review",
+    "title": "AI Agents in Clinical Medicine: A Systematic Review",
+    "doi": "10.1101/2025.08.22.25334232",
+    "year": 2025,
+    "date": "2025-08-26",
+    "journal": "medRxiv",
+    "status": "Preprint",
+    "authors": [
+      {
+        "given": "Alon",
+        "family": "Gorenshtein"
+      },
+      {
+        "given": "Mahmud",
+        "family": "Omar"
+      },
+      {
+        "given": "Benjamin S",
+        "family": "Glicksberg"
+      },
+      {
+        "given": "Girish N",
+        "family": "Nadkarni"
+      },
+      {
+        "given": "Eyal",
+        "family": "Klang"
+      }
+    ],
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "articleNumber": "",
+    "code": "",
+    "research": ""
+  },
+  {
+    "slug": "emg-randomized-trial",
+    "title": "AI-Based EMG Reporting: A Randomized Controlled Trial",
+    "doi": "10.1007/s00415-025-13261-3",
+    "year": 2025,
+    "date": "2025-08-22",
+    "journal": "Journal of Neurology",
+    "status": "Journal publication",
+    "authors": [
+      {
+        "given": "Alon",
+        "family": "Gorenshtein"
+      },
+      {
+        "given": "Yana",
+        "family": "Weisblat"
+      },
+      {
+        "given": "Mohamed",
+        "family": "Khateb"
+      },
+      {
+        "given": "Gilad",
+        "family": "Kenan"
+      },
+      {
+        "given": "Irina",
+        "family": "Tsirkin"
+      },
+      {
+        "given": "Galina",
+        "family": "Fayn"
+      },
+      {
+        "given": "Semion",
+        "family": "Geller"
+      },
+      {
+        "given": "Shahar",
+        "family": "Shelly"
+      }
+    ],
+    "volume": "272",
+    "issue": "9",
+    "pages": "",
+    "articleNumber": "586",
+    "code": "",
+    "research": "/research/clinical-neurophysiology/"
+  },
+  {
+    "slug": "literas",
+    "title": "LITERAS: Biomedical literature review and citation retrieval agents",
+    "doi": "10.1016/j.compbiomed.2025.110363",
+    "year": 2025,
+    "date": "2025-06",
+    "journal": "Computers in Biology and Medicine",
+    "status": "Journal publication",
+    "authors": [
+      {
+        "given": "Alon",
+        "family": "Gorenshtein"
+      },
+      {
+        "given": "Kamel",
+        "family": "Shihada"
+      },
+      {
+        "given": "Moran",
+        "family": "Sorka"
+      },
+      {
+        "given": "Dvir",
+        "family": "Aran"
+      },
+      {
+        "given": "Shahar",
+        "family": "Shelly"
+      }
+    ],
+    "volume": "192",
+    "issue": "",
+    "pages": "110363",
+    "articleNumber": "110363",
+    "code": "https://github.com/Alon-Gorenshtein/LITERAS",
+    "research": ""
+  }
+]

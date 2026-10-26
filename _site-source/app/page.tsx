@@ -82,7 +82,7 @@ const publications = [
     href: "https://doi.org/10.1038/s41591-026-04350-5",
   },
   {
-    journal: "The Lancet Digital Health · 2026",
+    journal: "medRxiv · 2025 · Preprint version",
     title: "AI Agents in Clinical Medicine: A Systematic Review",
     authors: "Gorenshtein A, Omar M, Glicksberg BS, et al.",
     href: "https://doi.org/10.1101/2025.08.22.25334232",
@@ -291,6 +291,7 @@ export default function Home() {
             </a>
           ))}
         </div>
+        <p className="bibliography-actions"><a className="text-link" href="/publications/">Browse selected publications and download citations →</a><a className="text-link" href="/projects/">Research software and public code →</a></p>
         <div className="publication-footer"><span>40+ PubMed-indexed publications</span><a className="text-link" href="https://www.ncbi.nlm.nih.gov/myncbi/alon.gorenshtein.1/bibliography/public/" target="_blank" rel="noreferrer">View NCBI bibliography <span aria-hidden="true">↗</span></a></div>
       </section>
 

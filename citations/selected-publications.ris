@@ -1,0 +1,187 @@
+TY  - JOUR
+ID  - small-language-models
+TI  - Small language models in clinical medicine: a systematic review of performance, safety, and deployment feasibility
+AU  - Gorenshtein, Alon
+AU  - Omar, Mahmud
+AU  - Barash, Yiftach
+AU  - Kruskal, Jonathan B
+AU  - Ahmed, Muneeb
+AU  - Brook, Olga R
+AU  - Illigens, Ben
+AU  - Nadkarni, Girish N
+AU  - Klang, Eyal
+PY  - 2026
+DO  - 10.1093/jamia/ocag164
+UR  - https://doi.org/10.1093/jamia/ocag164
+JO  - Journal of the American Medical Informatics Association
+M1  - ocag164
+ER  - 
+
+TY  - UNPB
+ID  - litbench
+TI  - LitBench: A Benchmark for Retrieval-Grounded Multi-Paper Evidence Synthesis in Epilepsy
+AU  - Gorenshtein, Alon
+AU  - Zhang, Tianyu
+AU  - Westover, M. Brandon
+AU  - Goldenholz, Daniel M.
+PY  - 2026
+DO  - 10.64898/2026.09.17.26363288
+UR  - https://doi.org/10.64898/2026.09.17.26363288
+N1  - medRxiv preprint; not certified by peer review
+ER  - 
+
+TY  - JOUR
+ID  - prospective-emergency-department-ai
+TI  - Prospective evaluation of a large language model clinical decision support system in the emergency department
+AU  - Leibovitch, Liron
+AU  - Ahituv, Adi
+AU  - Gorenshtein, Alon
+AU  - Aran, Dvir
+AU  - Sorka, Moran
+AU  - Miron, Keren
+AU  - Shelly, Shahar
+PY  - 2026
+DO  - 10.1038/s41591-026-04601-5
+UR  - https://doi.org/10.1038/s41591-026-04601-5
+JO  - Nature Medicine
+VL  - 32
+IS  - 10
+SP  - 3741
+EP  - 3747
+ER  - 
+
+TY  - JOUR
+ID  - command-following
+TI  - The Unsteady Return of Bedside Motor Command-Following After Acute Brain Injury
+AU  - Gorenshtein, Alon
+AU  - Adiniaev, Yosef
+AU  - Omar, Mahmud
+AU  - Barash, Yiftach
+AU  - Klang, Eyal
+AU  - Daniel, Oved
+PY  - 2026
+DO  - 10.1007/s12028-026-02624-x
+UR  - https://doi.org/10.1007/s12028-026-02624-x
+JO  - Neurocritical Care
+ER  - 
+
+TY  - JOUR
+ID  - llm-brain-computer-interfaces
+TI  - Large language models integrated into brain–computer interfaces for communication and control: a systematic review
+AU  - Gorenshtein, Alon
+AU  - Omar, Mahmud
+AU  - Barash, Yiftach
+AU  - Nadkarni, Girish N
+AU  - Klang, Eyal
+PY  - 2026
+DO  - 10.1088/2057-1976/ae737b
+UR  - https://doi.org/10.1088/2057-1976/ae737b
+JO  - Biomedical Physics & Engineering Express
+VL  - 12
+IS  - 3
+SP  - 035077
+ER  - 
+
+TY  - JOUR
+ID  - clinical-ai-evaluation
+TI  - How to meaningfully evaluate AI in clinical medicine
+AU  - Omar, Mahmud
+AU  - Agbareia, Reem
+AU  - Gorenshtein, Alon
+AU  - Ramaswamy, Ashwin
+AU  - Sakhuja, Ankit
+AU  - Barash, Yiftach
+AU  - Ting, Daniel S. W.
+AU  - Klang, Eyal
+AU  - Nadkarni, Girish N.
+PY  - 2026
+DO  - 10.1038/s41591-026-04350-5
+UR  - https://doi.org/10.1038/s41591-026-04350-5
+JO  - Nature Medicine
+VL  - 32
+IS  - 6
+SP  - 1948
+EP  - 1949
+ER  - 
+
+TY  - JOUR
+ID  - neurological-clinical-reasoning
+TI  - A multi-agent approach to neurological clinical reasoning
+AU  - Sorka, Moran
+AU  - Gorenshtein, Alon
+AU  - Aran, Dvir
+AU  - Shelly, Shahar
+PY  - 2025
+DO  - 10.1371/journal.pdig.0001106
+UR  - https://doi.org/10.1371/journal.pdig.0001106
+JO  - PLOS Digital Health
+VL  - 4
+IS  - 12
+SP  - e0001106
+ER  - 
+
+TY  - JOUR
+ID  - inspire
+TI  - Agent-guided AI-powered interpretation and reporting of nerve conduction studies and EMG (INSPIRE)
+AU  - Gorenshtein, Alon
+AU  - Sorka, Moran
+AU  - Khateb, Mohamed
+AU  - Aran, Dvir
+AU  - Shelly, Shahar
+PY  - 2025
+DO  - 10.1016/j.clinph.2025.2110792
+UR  - https://doi.org/10.1016/j.clinph.2025.2110792
+JO  - Clinical Neurophysiology
+VL  - 177
+SP  - 2110792
+ER  - 
+
+TY  - UNPB
+ID  - clinical-ai-agents-review
+TI  - AI Agents in Clinical Medicine: A Systematic Review
+AU  - Gorenshtein, Alon
+AU  - Omar, Mahmud
+AU  - Glicksberg, Benjamin S
+AU  - Nadkarni, Girish N
+AU  - Klang, Eyal
+PY  - 2025
+DO  - 10.1101/2025.08.22.25334232
+UR  - https://doi.org/10.1101/2025.08.22.25334232
+N1  - medRxiv preprint; not certified by peer review
+ER  - 
+
+TY  - JOUR
+ID  - emg-randomized-trial
+TI  - AI-Based EMG Reporting: A Randomized Controlled Trial
+AU  - Gorenshtein, Alon
+AU  - Weisblat, Yana
+AU  - Khateb, Mohamed
+AU  - Kenan, Gilad
+AU  - Tsirkin, Irina
+AU  - Fayn, Galina
+AU  - Geller, Semion
+AU  - Shelly, Shahar
+PY  - 2025
+DO  - 10.1007/s00415-025-13261-3
+UR  - https://doi.org/10.1007/s00415-025-13261-3
+JO  - Journal of Neurology
+VL  - 272
+IS  - 9
+M1  - 586
+ER  - 
+
+TY  - JOUR
+ID  - literas
+TI  - LITERAS: Biomedical literature review and citation retrieval agents
+AU  - Gorenshtein, Alon
+AU  - Shihada, Kamel
+AU  - Sorka, Moran
+AU  - Aran, Dvir
+AU  - Shelly, Shahar
+PY  - 2025
+DO  - 10.1016/j.compbiomed.2025.110363
+UR  - https://doi.org/10.1016/j.compbiomed.2025.110363
+JO  - Computers in Biology and Medicine
+VL  - 192
+SP  - 110363
+ER  - 

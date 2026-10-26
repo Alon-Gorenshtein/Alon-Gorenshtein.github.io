@@ -4,7 +4,8 @@ const { default: worker } = await import(new URL(`../dist/server/index.js?pages=
 await rm(outputDirectory, { recursive: true, force: true });
 await mkdir(outputDirectory, { recursive: true });
 await cp(new URL("../dist/client/", import.meta.url), outputDirectory, { recursive: true });
-const paths = ["/", "/research/clinical-ai-safety/", "/research/clinical-neurophysiology/", "/research/brain-computer-interfaces/", "/research/neurocritical-care/"];
+await import("./export-citations.mjs");
+const paths = ["/", "/research/clinical-ai-safety/", "/research/clinical-neurophysiology/", "/research/brain-computer-interfaces/", "/research/neurocritical-care/", "/publications/", "/projects/"];
 for (const path of paths) {
   const response = await worker.fetch(new Request(`https://alon-gorenshtein.github.io${path}`, { headers: { accept: "text/html", host: "alon-gorenshtein.github.io", "x-forwarded-proto": "https" } }), { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } }, { waitUntil() {}, passThroughOnException() {} });
   if (!response.ok) throw new Error(`Could not render ${path}: ${response.status}`);

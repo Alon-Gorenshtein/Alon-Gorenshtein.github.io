@@ -49,7 +49,8 @@ export default function SiteHeader() {
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#work">Work</a>
-        <a href="#publications">Publications</a>
+        <a href="/publications/">Publications</a>
+        <a href="/projects/">Code</a>
       </nav>
       <ThemeToggle />
       <a className="nav-contact" href="#contact">
