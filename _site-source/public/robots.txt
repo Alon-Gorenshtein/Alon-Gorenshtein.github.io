@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alon-gorenshtein.github.io/sitemap.xml
