@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SITE_URL, PERSON_ID, person, biography, jsonLd } from "./lib/identity";
 import { researchPages } from "./lib/research";
+import { projectDetails } from "./lib/project-details";
 import LiveMotion from "./components/LiveMotion";
 import SiteHeader from "./components/SiteHeader";
 
@@ -240,6 +241,14 @@ export default function Home() {
         <div className="section-label"><span>Research in depth</span></div>
         <h2 className="section-title">Questions, methods,<br /><em>and evidence.</em></h2>
         <div className="research-guide-grid">{researchPages.map((page) => <a className="research-guide" href={`/research/${page.slug}/`} key={page.slug}><h3>{page.title}</h3><p>{page.summary}</p><span className="text-link">Read the research →</span></a>)}</div>
+      </section>
+
+      <section className="section-shell research-guides" id="projects">
+        <div className="section-label"><span>Research projects</span></div>
+        <h2 className="section-title">Ideas made<br /><em>into tools.</em></h2>
+        <p className="section-side-note">Research systems and benchmarks built with collaborators to investigate clinical AI, neurology, and evidence synthesis.</p>
+        <div className="research-guide-grid">{projectDetails.map((project) => <a className="research-guide" href={`/projects/${project.slug}/`} key={project.slug}><h3>{project.shortName}</h3><p>{project.summary}</p><span className="text-link">Explore the project →</span></a>)}</div>
+        <p><a className="text-link" href="/projects/">Browse all research projects and public code →</a></p>
       </section>
 
       <section className="work section-shell" id="work">

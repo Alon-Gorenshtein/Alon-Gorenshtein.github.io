@@ -11,7 +11,7 @@ export const person = {
     { "@type": "Organization", name: "Harvard Medical School", url: "https://hms.harvard.edu/" },
     { "@type": "Organization", name: "BRIDGE GenAI Lab", url: "https://bridgegenai.org/" }
   ],
-  knowsAbout: ["Clinical artificial intelligence", "AI safety and alignment", "Clinical neurophysiology", "Brain–computer interfaces", "Neurocritical care"],
+  knowsAbout: ["Clinical artificial intelligence", "AI safety and alignment", "Clinical neurophysiology", "Brain–computer interfaces", "Neurocritical care", "Biomedical literature retrieval", "Electromyography", "AI agents in medicine"],
   sameAs: [
     "https://orcid.org/0009-0000-7542-8608",
     "https://www.linkedin.com/in/alon-gorenshtein/",
