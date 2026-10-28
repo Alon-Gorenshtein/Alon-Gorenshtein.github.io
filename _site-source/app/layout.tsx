@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Alon Gorenshtein, MD — Physician-Scientist & AI Engineer",
-  description: "Alon Gorenshtein, MD: physician-scientist at BIDMC and Harvard Medical School, Head of AI Engineering at BRIDGE GenAI Lab. Clinical AI and neurology research.",
+  description: "Alon Gorenshtein, MD, is a physician-scientist and AI researcher at BIDMC. Explore INSPIRE, LITERAS, clinical AI, neurology and research publications.",
   alternates: { canonical: `${SITE_URL}/` },
   robots: { index: true, follow: true },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },

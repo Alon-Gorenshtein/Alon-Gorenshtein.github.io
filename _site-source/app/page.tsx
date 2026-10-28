@@ -125,7 +125,7 @@ function HeroNeuroLayer() {
 export const metadata: Metadata = {
   title: "Alon Gorenshtein, MD — Physician-Scientist & AI Engineer",
   description:
-    "Alon Gorenshtein, MD: physician-scientist at BIDMC and Harvard Medical School, Head of AI Engineering at BRIDGE GenAI Lab. Clinical AI and neurology research.",
+    "Alon Gorenshtein, MD, is a physician-scientist and AI researcher at BIDMC. Explore INSPIRE, LITERAS, clinical AI, neurology and research publications.",
 };
 
 export default function Home() {
