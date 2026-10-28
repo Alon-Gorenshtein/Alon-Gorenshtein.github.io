@@ -395,3 +395,33 @@ html.motion-ready [data-motion-reveal].is-visible { opacity: 1; transform: none;
   .project-tile { transition: none; }
   .project-tile:hover, .project-tile:focus-visible { transform: none; }
 }
+
+/* Project pages: calm hierarchy, direct links, and accessible touch feedback. */
+.project-story-banner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 24px; align-items: center; padding: 20px 24px; margin-top: 38px; border: 1px solid var(--line); background: color-mix(in srgb, var(--paper) 86%, var(--cobalt) 14%); }
+.project-story-banner span { color: var(--cobalt); font-size: .62rem; font-weight: 750; letter-spacing: .1em; }
+.project-story-banner p { margin: 10px 0 0; font: 400 clamp(1.2rem, 2vw, 1.7rem)/1.25 var(--serif); letter-spacing: -.02em; }
+.project-story-art { height: 120px; color: var(--cobalt); direction: ltr; }
+.project-story-art svg { display: block; width: 100%; height: 100%; }
+.project-story-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; padding: 17px 0; border-bottom: 1px solid var(--line); font-size: .8rem; }
+.project-story-nav span { color: var(--muted); font-size: .62rem; font-weight: 750; letter-spacing: .09em; }
+.project-story-nav a { padding: 7px 0; color: var(--cobalt); text-decoration: underline; text-underline-offset: 3px; }
+.project-question { padding: 22px 26px; border-inline-start: 3px solid var(--cobalt); background: color-mix(in srgb, var(--paper) 92%, var(--cobalt) 8%); }
+.project-question h2 { color: var(--cobalt); }
+.research-page .project-question p, .he-detail .project-question p { margin-bottom: 0; font-size: 1.08rem; }
+.he-story-banner { background: #e8edf3; border-color: #d5dce6; color: #17212b; }
+.he-story-banner span, .he-story-banner .project-story-art { color: #244baf; }
+.he-detail .project-story-nav a { color: #173bb5; }
+.he-detail .project-question { background: #eef1f5; border-color: #244baf; }
+.he-detail .project-question h2 { color: #244baf; }
+.project-tile:active, .he-card:active { transform: scale(.99); transition: transform 80ms ease-out; }
+.mobile-menu-toggle:active, .language-link:active { opacity: .65; }
+@media (max-width: 620px) {
+  .project-story-banner { grid-template-columns: 1fr; gap: 8px; padding: 18px; }
+  .project-story-art { height: 90px; }
+  .project-story-nav { gap: 6px 15px; }
+  .project-story-nav span { width: 100%; }
+  .project-question { padding: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-tile:active, .he-card:active { transform: none; }
+}
