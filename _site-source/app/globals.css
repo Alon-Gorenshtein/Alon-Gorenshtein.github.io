@@ -341,3 +341,57 @@ html.motion-ready [data-motion-reveal].is-visible { opacity: 1; transform: none;
   .mobile-navigation a { padding: 14px 4px; border-bottom: 1px solid var(--line); font-size: .9rem; font-weight: 600; }
   .mobile-navigation a:last-child { border: 0; }
 }
+
+/* A research-inspired visual language: signals, networks, and useful paths. */
+.hero-profile-links { display: flex; flex-wrap: wrap; gap: 10px 19px; margin-top: 34px; font-size: .71rem; font-weight: 650; letter-spacing: .02em; }
+.hero-profile-links a { display: inline-flex; min-height: 34px; align-items: center; border-bottom: 1px solid var(--line); }
+.hero-profile-links a:hover { color: var(--cobalt); border-color: currentColor; }
+.hero-orbit { position: absolute; width: min(90%, 540px); aspect-ratio: 1; right: 4%; border: 1px solid color-mix(in srgb, var(--cobalt) 20%, transparent); border-radius: 50%; pointer-events: none; }
+.hero-orbit-one { transform: rotate(-20deg) scaleY(.63); }
+.hero-orbit-two { transform: rotate(28deg) scaleY(.72); border-style: dashed; opacity: .6; }
+.project-showcase { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; margin: 42px 0 28px; }
+.project-tile { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--line); background: color-mix(in srgb, var(--paper) 88%, var(--cobalt) 12%); transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
+.project-tile:hover, .project-tile:focus-visible { border-color: var(--cobalt); box-shadow: 0 12px 24px color-mix(in srgb, var(--ink) 9%, transparent); transform: translateY(-3px); }
+.project-tile-top { display: flex; justify-content: space-between; gap: 10px; padding: 18px 20px 0; color: var(--muted); font-size: .59rem; font-weight: 700; letter-spacing: .13em; }
+.project-visual { height: 160px; padding: 14px 20px; color: var(--cobalt); overflow: clip; }
+.project-visual svg, .he-project-visual svg { width: 100%; height: 100%; display: block; }
+.glyph-grid, .glyph-line, .glyph-shape, .glyph-trace { fill: none; stroke: currentColor; vector-effect: non-scaling-stroke; }
+.glyph-grid { opacity: .12; stroke-width: .8; }.glyph-line { opacity: .65; stroke-width: 1.5; }.glyph-shape { fill: color-mix(in srgb, var(--paper) 70%, transparent); stroke-width: 1.5; }.glyph-trace { stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 500; stroke-dashoffset: 0; animation: trace-flow 10s ease-in-out infinite; }.glyph-dot { fill: currentColor; }
+@keyframes trace-flow { 0%, 100% { stroke-dashoffset: 0; opacity: .9; } 50% { stroke-dashoffset: 90; opacity: .55; } }
+.project-tile-content { display: flex; flex: 1; flex-direction: column; padding: 18px 22px 24px; border-top: 1px solid var(--line); }
+.project-tile-content h3 { font: 400 clamp(1.8rem, 3vw, 2.55rem)/1.05 var(--serif); letter-spacing: -.04em; }
+.project-tile-content p { max-width: 490px; margin: 14px 0 24px; color: var(--muted); font-size: .9rem; line-height: 1.6; }
+.project-tile-link { margin-top: auto; font-size: .68rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; color: var(--cobalt); }
+.lab-spotlight { display: grid; grid-template-columns: 1.1fr .9fr; gap: 60px; padding: clamp(30px,5vw,72px); color: #f8f6f0; background: #142330; position: relative; overflow: clip; }
+.lab-spotlight::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 5%,rgba(104,157,191,.2),transparent 44%); pointer-events: none; }
+.lab-spotlight-copy, .lab-spotlight-aside { position: relative; min-width: 0; }
+.lab-kicker, .lab-spotlight-aside > p { color: #a8bdca; font-size: .61rem; font-weight: 700; letter-spacing: .14em; }
+.lab-spotlight-copy h2 { margin: 32px 0 23px; font: 400 clamp(2.6rem,5vw,5rem)/.98 var(--serif); letter-spacing: -.055em; }
+.lab-spotlight-copy h2 em { color: #b7c8ff; font-style: italic; }
+.lab-spotlight-copy > p:not(.lab-kicker) { max-width: 470px; color: #c4d0d4; font-size: .94rem; line-height: 1.75; }
+.lab-primary-link { display: inline-flex; align-items: center; gap: 16px; margin-top: 28px; padding: 14px 18px; background: #e5edeb; color: #142330; font-size: .72rem; font-weight: 750; letter-spacing: .03em; }
+.lab-primary-link:hover { background: #c9d8ff; }
+.lab-network { height: 148px; position: relative; margin-bottom: 32px; color: #9db8c9; }
+.lab-network svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1; opacity: .5; }
+.lab-network span { position: absolute; display: block; width: 7px; height: 7px; border: 1px solid #bcd5e3; background: #c9e3eb; border-radius: 50%; box-shadow: 0 0 0 5px rgba(167,207,224,.12); }
+.lab-network span:nth-child(1) { left: 5%; top: 74%; }.lab-network span:nth-child(2) { left: 27%; top: 24%; }.lab-network span:nth-child(3) { left: 51%; top: 53%; }.lab-network span:nth-child(4) { left: 73%; top: 15%; }.lab-network span:nth-child(5) { left: 94%; top: 61%; }
+.lab-links { display: grid; grid-template-columns: 1fr 1fr; margin-top: 14px; border-top: 1px solid #4c5b67; }
+.lab-links a { display: flex; justify-content: space-between; gap: 8px; padding: 16px 5px; border-bottom: 1px solid #4c5b67; font-size: .82rem; }
+.lab-links a:nth-child(odd) { margin-right: 16px; }.lab-links a:hover { color: #b7c8ff; }
+.he-project-visual { height: 100px; color: #3458ad; margin-bottom: 16px; direction: ltr; }
+.he-lab { display: grid; grid-template-columns: 1.2fr .8fr; gap: 38px; margin-block: 35px; padding: 42px; width: min(100% - 48px,1120px); background: #142330; color: #f8f6f0; }
+.he-lab h2 { color: #f8f6f0; }.he-lab p:not(.eyebrow) { color: #d3dfe1; line-height: 1.9; }.he-lab p a { color: #c8d6ff !important; }
+.he-lab .eyebrow, .he-lab-links span { color: #b6c9e5; }.he-lab-links { display: grid; align-content: center; gap: 4px; }
+.he-lab-links span { font-size: .85rem; margin-bottom: 8px; }.he-lab-links a { padding: 10px 0; border-bottom: 1px solid #4c5b67; color: #f8f6f0; direction: ltr; text-align: right; }
+@media (max-width: 760px) {
+  .project-showcase { grid-template-columns: 1fr; }
+  .project-visual { height: 135px; }
+  .lab-spotlight { grid-template-columns: 1fr; gap: 40px; }
+  .lab-network { height: 100px; margin-bottom: 25px; }
+  .he-lab { grid-template-columns: 1fr; gap: 25px; padding: 30px 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .glyph-trace { animation: none; }
+  .project-tile { transition: none; }
+  .project-tile:hover, .project-tile:focus-visible { transform: none; }
+}

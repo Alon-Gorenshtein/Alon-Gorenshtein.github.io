@@ -4,6 +4,7 @@ import { researchPages } from "./lib/research";
 import { projectDetails } from "./lib/project-details";
 import LiveMotion from "./components/LiveMotion";
 import SiteHeader from "./components/SiteHeader";
+import ResearchGlyph from "./components/ResearchGlyph";
 
 const focusAreas = [
   {
@@ -117,6 +118,7 @@ const publications = [
 function HeroNeuroLayer() {
   return (
     <div className="hero-neuro-layer" aria-hidden="true">
+      <span className="hero-orbit hero-orbit-one" /><span className="hero-orbit hero-orbit-two" />
       <img className="hero-neurotech-brain" src="/neurotech-brain-trimmed.png" alt="" />
     </div>
   );
@@ -159,6 +161,7 @@ export default function Home() {
               Research focus <span aria-hidden="true">↗</span>
             </a>
           </div>
+          <div className="hero-profile-links" aria-label="Professional profiles"><a href="https://bridgegenai.org/">BRIDGE GenAI Lab ↗</a><a href="https://www.linkedin.com/in/alon-gorenshtein/">LinkedIn ↗</a><a href="https://scholar.google.com/citations?user=jwe8TyoAAAAJ">Google Scholar ↗</a></div>
         </div>
       </section>
 
@@ -248,8 +251,13 @@ export default function Home() {
         <div className="section-label"><span>Research projects</span></div>
         <h2 className="section-title">Ideas made<br /><em>into tools.</em></h2>
         <p className="section-side-note">Research systems and benchmarks built with collaborators to investigate clinical AI, neurology, and evidence synthesis.</p>
-        <div className="research-guide-grid">{projectDetails.map((project) => <a className="research-guide" href={`/projects/${project.slug}/`} key={project.slug}><h3>{project.shortName}</h3><p>{project.summary}</p><span className="text-link">Explore the project →</span></a>)}</div>
+        <div className="project-showcase">{projectDetails.map((project, index) => <a className={`project-tile project-tile-${project.slug}`} href={`/projects/${project.slug}/`} key={project.slug}><div className="project-tile-top"><span>RESEARCH PROJECT</span><span>0{index + 1} / 04</span></div><div className="project-visual"><ResearchGlyph kind={project.slug} /></div><div className="project-tile-content"><h3>{project.shortName}</h3><p>{project.summary}</p><span className="project-tile-link">Explore the project <span aria-hidden="true">↗</span></span></div></a>)}</div>
         <p><a className="text-link" href="/projects/">Browse all research projects and public code →</a></p>
+      </section>
+
+      <section className="lab-spotlight section-shell" aria-labelledby="lab-spotlight-title">
+        <div className="lab-spotlight-copy"><p className="lab-kicker">A COLLABORATIVE HOME FOR CLINICAL AI</p><h2 id="lab-spotlight-title">Building better AI,<br /><em>together.</em></h2><p>At BRIDGE GenAI Lab, we study the safety, alignment, and real-world behavior of clinical AI. I lead AI engineering alongside a team of physicians and researchers.</p><a className="lab-primary-link" href="https://bridgegenai.org/">Explore BRIDGE GenAI Lab <span aria-hidden="true">↗</span></a></div>
+        <div className="lab-spotlight-aside"><div className="lab-network" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><svg viewBox="0 0 300 150" preserveAspectRatio="none"><path d="M15 113 L83 40 L155 82 L222 25 L286 95 M83 40 L222 25 M155 82 L220 130 L286 95"/></svg></div><p>FOLLOW THE WORK</p><div className="lab-links"><a href="https://www.linkedin.com/in/alon-gorenshtein/">LinkedIn <span>↗</span></a><a href="https://scholar.google.com/citations?user=jwe8TyoAAAAJ">Google Scholar <span>↗</span></a><a href="https://github.com/Alon-Gorenshtein">GitHub <span>↗</span></a><a href="https://orcid.org/0009-0000-7542-8608">ORCID <span>↗</span></a></div></div>
       </section>
 
       <section className="work section-shell" id="work">
