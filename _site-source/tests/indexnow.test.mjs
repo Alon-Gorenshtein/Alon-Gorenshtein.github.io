@@ -9,7 +9,8 @@ test('IndexNow payload covers all published pages with same-host ownership',asyn
  const payload=createSubmission(xml,{host,key});
  assert.equal(payload.host,host);
  assert.equal(payload.keyLocation,`https://${host}/${key}.txt`);
- assert.equal(payload.urlList.length,11);
+ assert.equal(payload.urlList.length,22);
+ assert.ok(payload.urlList.includes(`https://${host}/he/`));
  for (const slug of ["inspire", "literas", "litbench", "neuro-copilot"]) assert.ok(payload.urlList.includes(`https://${host}/projects/${slug}/`));
  assert.ok(payload.urlList.includes(`https://${host}/publications/`));
  assert.equal(new Set(payload.urlList).size,payload.urlList.length);

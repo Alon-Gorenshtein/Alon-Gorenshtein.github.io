@@ -61,6 +61,7 @@ export default function SiteHeader() {
         <a href="/publications/" onClick={() => setMenuOpen(false)}>Publications</a>
         <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
       </nav>
+      <a className="language-link" href="/he/" lang="he" dir="rtl">עברית</a>
       <ThemeToggle />
       <a className="nav-contact" href="#contact">
         Get in touch <span aria-hidden="true">↗</span>

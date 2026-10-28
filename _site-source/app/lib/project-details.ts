@@ -36,7 +36,7 @@ export const projectDetails = [
     methods: ["The medRxiv preprint describes 1,980 open-access papers and 9,472 human-reviewed facts, with single-paper and two-paper questions and tests where the supporting source is deliberately removed.", "The authors report that no system was reliable across every tested dimension. More competing papers and cross-paper synthesis created challenges, and systems differed in their willingness to abstain when evidence was missing."],
     role: "Alon Gorenshtein is first author, with Tianyu Zhang, M. Brandon Westover, and Daniel M. Goldenholz. The code is maintained in the Goldenholz Lab repository.",
     limitation: "The linked 2026 manuscript is a preprint and has not been peer reviewed. Results reflect the models and conditions described in that manuscript.",
-    links: [{label:"Read the LitBench preprint",url:"https://doi.org/10.64898/2026.09.17.26363288"},{label:"Explore the LitBench repository",url:"https://github.com/GoldenholzLab/LitBench"},{label:"LitBench citation",url:"/publications/#litbench"}]
+    links: [{label:"Read the LitBench preprint",url:"https://doi.org/10.64898/2026.09.17.26363288"},{label:"Open the preprint on medRxiv",url:"https://www.medrxiv.org/content/10.64898/2026.09.17.26363288v1"},{label:"Explore the LitBench repository",url:"https://github.com/GoldenholzLab/LitBench"},{label:"LitBench citation",url:"/publications/#litbench"}]
   },
   {
     slug: "neuro-copilot",
@@ -49,6 +49,6 @@ export const projectDetails = [
     methods: ["In a 2025 Journal of Clinical Medicine paper, Gorenshtein and colleagues studied an AI-based clinical decision-making tool for neurologists in the emergency department using a retrospective dataset.", "The study investigated predictions related to admission and agreement with expert decisions. Its authors describe the need for additional real-world and prospective evaluation of combined clinician–AI performance."],
     role: "Alon Gorenshtein is first author. The publication credits Gorenshtein and Shahar Shelly with conceptualization and methodology alongside a multidisciplinary research team.",
     limitation: "This was a retrospective research study, not evidence that the system independently provides safe clinical care. Consult the publication for study design and limitations.",
-    links: [{label:"Read the Journal of Clinical Medicine paper",url:"https://doi.org/10.3390/jcm14176333"},{label:"Explore related clinical AI research",url:"/research/clinical-ai-safety/"}]
+    links: [{label:"Read the Journal of Clinical Medicine paper",url:"https://doi.org/10.3390/jcm14176333"},{label:"Read the paper on PubMed Central",url:"https://pmc.ncbi.nlm.nih.gov/articles/PMC12429661/"},{label:"Explore related clinical AI research",url:"/research/clinical-ai-safety/"}]
   }
 ];

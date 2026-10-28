@@ -3,7 +3,7 @@ export const PERSON_ID = `${SITE_URL}/#person`;
 export const biography = "Alon Gorenshtein, MD, is a physician-scientist and AI engineer affiliated with Beth Israel Deaconess Medical Center and Harvard Medical School. He is Head of AI Engineering at BRIDGE GenAI Lab and a postdoctoral fellow in the BIDMC Epilepsy + Data Science Lab. His research spans clinical AI safety and evaluation, neurophysiology, brain–computer interfaces, and neurocritical care.";
 export const person = {
   "@type": "Person", "@id": PERSON_ID,
-  name: "Alon Gorenshtein", givenName: "Alon", familyName: "Gorenshtein", honorificSuffix: "MD",
+  name: "Alon Gorenshtein", alternateName: "אלון גורנשטיין", givenName: "Alon", familyName: "Gorenshtein", honorificSuffix: "MD",
   url: `${SITE_URL}/`, image: `${SITE_URL}/alon-portrait.png`, description: biography,
   jobTitle: "Physician-scientist and AI engineer",
   affiliation: [

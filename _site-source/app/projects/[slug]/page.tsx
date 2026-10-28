@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!p) return {};
   const url = `${SITE_URL}/projects/${p.slug}/`;
   const title = p.seoTitle;
-  return { title, description: p.summary, alternates: { canonical: url }, openGraph: { title, description: p.summary, url, type: "website", images: [{ url: `${SITE_URL}/og.png`, width: 1200, height: 630 }] }, twitter: { card: "summary_large_image", title, description: p.summary, images: [`${SITE_URL}/og.png`] } };
+  return { title, description: p.summary, alternates: { canonical: url, languages: { en: url, he: `${SITE_URL}/he/projects/${p.slug}/` } }, openGraph: { title, description: p.summary, url, type: "website", images: [{ url: `${SITE_URL}/og.png`, width: 1200, height: 630 }] }, twitter: { card: "summary_large_image", title, description: p.summary, images: [`${SITE_URL}/og.png`] } };
 }
 export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
@@ -20,7 +20,7 @@ export default async function ProjectPage({ params }: Props) {
   const url = `${SITE_URL}/projects/${p.slug}/`;
   const graph = { "@context": "https://schema.org", "@type": "WebPage", "@id": `${url}#page`, url, name: p.title, description: p.summary, about: { "@id": PERSON_ID }, citation: p.links.filter(link => link.url.startsWith("https://doi.org/")).map(link => link.url) };
   return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(graph) }} />
-    <header className="research-page-header"><a href="/">Alon Gorenshtein, MD</a><a href="/projects/">All projects ↗</a></header>
+    <header className="research-page-header"><a href="/">Alon Gorenshtein, MD</a><a lang="he" dir="rtl" href={`/he/projects/${p.slug}/`}>עברית</a><a href="/projects/">All projects ↗</a></header>
     <main className="research-page"><nav className="research-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/projects/">Projects</a> / {p.shortName}</nav>
       <article><p className="eyebrow">RESEARCH PROJECT · ALON GORENSHTEIN, MD</p><h1>{p.title}</h1><p className="research-page-intro">{p.intro}</p>
         <section><h2>Research question</h2><p>{p.question}</p></section>

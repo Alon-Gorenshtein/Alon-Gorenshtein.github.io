@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!page) return {};
   const url = `${SITE_URL}/research/${page.slug}/`;
   const title = `${page.title} | Alon Gorenshtein, MD`;
-  return { title, description: page.summary, alternates: { canonical: url }, openGraph: { title, description: page.summary, url, type: "website", images: [{ url: `${SITE_URL}/og.png`, width: 1200, height: 630 }] }, twitter: { card: "summary_large_image", title, description: page.summary, images: [`${SITE_URL}/og.png`] } };
+  return { title, description: page.summary, alternates: { canonical: url, languages: { en: url, he: `${SITE_URL}/he/research/${page.slug}/` } }, openGraph: { title, description: page.summary, url, type: "website", images: [{ url: `${SITE_URL}/og.png`, width: 1200, height: 630 }] }, twitter: { card: "summary_large_image", title, description: page.summary, images: [`${SITE_URL}/og.png`] } };
 }
 export default async function ResearchPage({ params }: Props) {
   const { slug } = await params;
@@ -24,7 +24,7 @@ export default async function ResearchPage({ params }: Props) {
   ] };
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(graph) }} />
-    <header className="research-page-header"><a href="/">Alon Gorenshtein, MD</a><a href="/#research-pages">All research ↗</a></header>
+    <header className="research-page-header"><a href="/">Alon Gorenshtein, MD</a><a lang="he" dir="rtl" href={`/he/research/${page.slug}/`}>עברית</a><a href="/#research-pages">All research ↗</a></header>
     <main className="research-page">
       <nav className="research-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/#research-pages">Research</a></nav>
       <article>

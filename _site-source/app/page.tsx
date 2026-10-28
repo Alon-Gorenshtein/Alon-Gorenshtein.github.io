@@ -126,6 +126,7 @@ export const metadata: Metadata = {
   title: "Alon Gorenshtein, MD — Physician-Scientist & AI Engineer",
   description:
     "Alon Gorenshtein, MD, is a physician-scientist and AI researcher at BIDMC. Explore INSPIRE, LITERAS, clinical AI, neurology and research publications.",
+  alternates: { canonical: `${SITE_URL}/`, languages: { en: `${SITE_URL}/`, he: `${SITE_URL}/he/` } },
 };
 
 export default function Home() {
