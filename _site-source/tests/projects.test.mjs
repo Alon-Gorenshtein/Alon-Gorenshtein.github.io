@@ -14,6 +14,8 @@ for (const slug of ['inspire', 'literas', 'litbench', 'neuro-copilot']) {
     ]);
     assert.ok(html.includes(`rel="canonical" href="${base}${path}"`));
     assert.ok(html.includes('Alon Gorenshtein'));
+    const title = html.match(/<title>(.*?)<\/title>/)?.[1];
+    assert.ok(title && title.length <= 70, `Expected a descriptive title under 70 characters: ${title}`);
     assert.ok(html.includes('Research question'));
     assert.ok(html.includes('https://doi.org/'));
     assert.ok(home.includes(`href="${path}"`));

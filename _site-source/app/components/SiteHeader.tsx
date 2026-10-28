@@ -5,6 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 
 export default function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     let frame = 0;
@@ -51,6 +52,14 @@ export default function SiteHeader() {
         <a href="#work">Work</a>
         <a href="/publications/">Publications</a>
         <a href="/projects/">Projects</a>
+      </nav>
+      <button className="mobile-menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen(open => !open)}>{menuOpen ? "Close" : "Menu"}</button>
+      <nav id="mobile-navigation" className="mobile-navigation" aria-label="Mobile navigation" hidden={!menuOpen}>
+        <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+        <a href="#research" onClick={() => setMenuOpen(false)}>Research</a>
+        <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+        <a href="/publications/" onClick={() => setMenuOpen(false)}>Publications</a>
+        <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
       </nav>
       <ThemeToggle />
       <a className="nav-contact" href="#contact">

@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const p = projectDetails.find(item => item.slug === slug);
   if (!p) return {};
   const url = `${SITE_URL}/projects/${p.slug}/`;
-  const title = `${p.title} | Alon Gorenshtein, MD`;
+  const title = p.seoTitle;
   return { title, description: p.summary, alternates: { canonical: url }, openGraph: { title, description: p.summary, url, type: "website", images: [{ url: `${SITE_URL}/og.png`, width: 1200, height: 630 }] }, twitter: { card: "summary_large_image", title, description: p.summary, images: [`${SITE_URL}/og.png`] } };
 }
 export default async function ProjectPage({ params }: Props) {

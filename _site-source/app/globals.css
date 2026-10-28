@@ -40,7 +40,7 @@ p, h1, h2, h3 { margin: 0; }
 
 .section-shell { width: min(100% - 88px, 1280px); margin: 0 auto; }
 .site-header { position: sticky; top: 0; z-index: 20; width: min(100% - 88px, 1280px); margin: 0 auto; min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 30px; border-bottom: 1px solid var(--line); background: var(--paper); background: color-mix(in srgb, var(--paper) 0%, transparent); transition: background-color .24s ease, border-color .24s ease, box-shadow .24s ease; }
-.site-header-scrolled { background: var(--paper); background: color-mix(in srgb, var(--paper) 78%, transparent); border-color: color-mix(in srgb, var(--line) 72%, transparent); box-shadow: 0 10px 28px color-mix(in srgb, var(--ink) 8%, transparent); backdrop-filter: blur(18px) saturate(145%); -webkit-backdrop-filter: blur(18px) saturate(145%); }
+.site-header-scrolled { background: var(--paper); border-color: var(--line); box-shadow: 0 4px 12px color-mix(in srgb, var(--ink) 6%, transparent); }
 .scroll-progress { position: absolute; right: 0; bottom: -1px; left: 0; z-index: 1; height: 2px; width: calc(var(--scroll-progress, 0) * 100%); background: var(--cobalt); transform-origin: left center; transition: width .16s linear; pointer-events: none; }
 .header-identity { display: inline-flex; align-items: center; gap: 13px; }
 .header-portrait { width: 45px; height: 45px; border: 1px solid rgba(26, 66, 203, .32); border-radius: 50%; object-fit: cover; object-position: 50% 20%; box-shadow: 0 0 0 4px color-mix(in srgb, var(--paper) 82%, transparent); }
@@ -83,7 +83,7 @@ p, h1, h2, h3 { margin: 0; }
 .marquee i { color: #b9c8ff; font-style: normal; }
 
 .intro, .work, .publications, .timeline-section { padding: 125px 0; }
-html.motion-ready [data-motion-reveal] { opacity: 0; transform: translateY(22px); transition: opacity .72s ease, transform .82s cubic-bezier(.2, .8, .2, 1); }
+html.motion-ready [data-motion-reveal] { opacity: 1; transform: none; }
 html.motion-ready [data-motion-reveal].is-visible { opacity: 1; transform: none; }
 .section-label { display: flex; gap: 23px; color: var(--cobalt); align-items: center; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
 .section-label span:first-child { letter-spacing: .14em; }
@@ -262,3 +262,24 @@ html.motion-ready [data-motion-reveal].is-visible { opacity: 1; transform: none;
 .research-page .bibliography-venue, .research-page .bibliography-authors { font-size: .9rem; }
 .bibliography-actions { display: flex; flex-wrap: wrap; column-gap: 24px; row-gap: 12px; }
 .citation-downloads { padding: 20px 0 30px; }
+
+/* Keep navigation and content reachable without long empty scroll regions. */
+.mobile-menu-toggle, .mobile-navigation { display: none; }
+@media (max-width: 960px) {
+  .hero-system { display: flex; flex-direction: column; align-items: stretch; min-height: 0; gap: 24px; padding: 60px 0 54px; }
+  .hero-copy { order: 0; }
+  .hero-neuro-layer { position: relative; inset: auto; order: 1; height: 300px; flex: 0 0 auto; justify-content: center; }
+  .hero-neurotech-brain { height: 100%; width: auto; max-width: 100%; }
+}
+@media (max-width: 620px) {
+  .site-header { background: var(--paper); }
+  .mobile-menu-toggle { display: inline-flex; align-items: center; justify-content: center; min-width: 48px; min-height: 44px; padding: 0 8px; border: 0; background: transparent; color: var(--ink); font: 700 .68rem/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; cursor: pointer; }
+  .mobile-navigation:not([hidden]) { display: grid; position: absolute; top: 100%; left: 0; right: 0; padding: 8px 16px; background: var(--paper); border: 1px solid var(--line); box-shadow: 0 8px 20px rgba(0, 0, 0, .12); }
+  .mobile-navigation a { display: block; padding: 14px 4px; font-size: .84rem; font-weight: 600; border-bottom: 1px solid var(--line); }
+  .mobile-navigation a:last-child { border: 0; }
+  .theme-toggle { margin-left: 0; }
+  .nav-contact { display: none; }
+  .hero-system { padding: 38px 0 42px; gap: 18px; }
+  .hero-neuro-layer { height: 230px; }
+  .hero-actions { flex-direction: row; flex-wrap: wrap; align-items: center; }
+}

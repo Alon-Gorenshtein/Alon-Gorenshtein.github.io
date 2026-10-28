@@ -41,7 +41,7 @@ const selectedWork = [
   {
     label: "Neurocritical care",
     title: "The unsteady return of command-following",
-    text: "A large-cohort study showing how bedside command-following after acute brain injury can return early, fluctuate, and depend strongly on sedation.",
+    text: "A large-cohort study showing how bedside command-following after acute brain injury can return early and fluctuate, with sedation providing important context for interpretation.",
     link: "https://link.springer.com/article/10.1007/s12028-026-02624-x",
     linkText: "Neurocritical Care",
   },
