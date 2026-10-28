@@ -154,8 +154,8 @@ export default function Home() {
             care, neural interfaces, and the systems that shape clinical decisions.
           </p>
           <div className="hero-actions reveal reveal-delay-3">
-            <a className="button button-dark" href="#work">
-              Explore the work <span aria-hidden="true">↓</span>
+            <a className="button button-dark" href="#projects">
+              Explore the projects <span aria-hidden="true">↓</span>
             </a>
             <a className="text-link" href="#research">
               Research focus <span aria-hidden="true">↗</span>

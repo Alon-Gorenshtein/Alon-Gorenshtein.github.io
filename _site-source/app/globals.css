@@ -362,6 +362,16 @@ html.motion-ready [data-motion-reveal].is-visible { opacity: 1; transform: none;
 .project-tile-content h3 { font: 400 clamp(1.8rem, 3vw, 2.55rem)/1.05 var(--serif); letter-spacing: -.04em; }
 .project-tile-content p { max-width: 490px; margin: 14px 0 24px; color: var(--muted); font-size: .9rem; line-height: 1.6; }
 .project-tile-link { margin-top: auto; font-size: .68rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; color: var(--cobalt); }
+/* Give the flagship research project room to lead the collection. */
+@media (min-width: 761px) {
+  .project-tile:first-child { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr; }
+  .project-tile:first-child .project-tile-top { grid-column: 1 / -1; }
+  .project-tile:first-child .project-visual { height: 100%; min-height: 240px; padding: 28px 36px; }
+  .project-tile:first-child .project-tile-content { justify-content: center; border-top: 0; border-inline-start: 1px solid var(--line); padding: 32px; }
+  .project-tile:first-child .project-tile-link { margin-top: 0; }
+}
+@media (min-width: 1000px) { .project-showcase { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 761px) and (max-width: 999px) { .project-tile:last-child { grid-column: 1 / -1; } }
 .lab-spotlight { display: grid; grid-template-columns: 1.1fr .9fr; gap: 60px; padding: clamp(30px,5vw,72px); color: #f8f6f0; background: #142330; position: relative; overflow: clip; }
 .lab-spotlight::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 5%,rgba(104,157,191,.2),transparent 44%); pointer-events: none; }
 .lab-spotlight-copy, .lab-spotlight-aside { position: relative; min-width: 0; }
