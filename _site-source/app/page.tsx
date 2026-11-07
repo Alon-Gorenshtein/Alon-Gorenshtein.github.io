@@ -229,7 +229,7 @@ export default function Home() {
           ))}
         </div>
         <p className="bibliography-actions"><a className="text-link" href="/publications/">Browse selected publications and download citations →</a><a className="text-link" href="/projects/">Research software and public code →</a></p>
-        <div className="publication-footer"><span>40+ PubMed-indexed publications</span><a className="text-link" href="https://www.ncbi.nlm.nih.gov/myncbi/alon.gorenshtein.1/bibliography/public/" target="_blank" rel="noreferrer">View NCBI bibliography <span aria-hidden="true">↗</span></a></div>
+        <div className="publication-footer"><span>50+ PubMed-indexed publications</span><a className="text-link" href="https://www.ncbi.nlm.nih.gov/myncbi/alon.gorenshtein.1/bibliography/public/" target="_blank" rel="noreferrer">View NCBI bibliography <span aria-hidden="true">↗</span></a></div>
       </section>
 
       <section className="contact section-shell section-dark" id="contact">

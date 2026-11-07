@@ -32,7 +32,7 @@ test("server-renders the Alon Gorenshtein research site", async () => {
   assert.match(html, /theme-toggle/);
   assert.match(html, /BRIDGE GenAI Lab/);
   assert.match(html, /Selected publications/);
-  assert.match(html, /40\+ PubMed-indexed publications/);
+  assert.match(html, /50\+ PubMed-indexed publications/);
   assert.match(html, /Le vent se lève/);
   assert.match(html, /og\.png/);
   assert.doesNotMatch(html, /hero-figure\.png|<img[^>]+src="\/hero-figure\.png"|role="img"/);

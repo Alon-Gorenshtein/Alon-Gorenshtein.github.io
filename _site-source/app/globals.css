@@ -492,3 +492,38 @@ html.motion-ready [data-motion-reveal].is-visible { opacity: 1; transform: none;
   .personal-button, .personal-actions a, .personal-social a, .personal-research-links a, .project-tile { transition: none; }
   .personal-button:hover, .project-tile:hover, .project-tile:focus-visible { transform: none; }
 }
+
+/* Cinematic research archive */
+.publications-hero { position: relative; overflow: hidden; margin: 38px 0 36px; padding: clamp(45px, 8vw, 100px); background: #111c27; color: #f6f5ed; border-radius: 4px; isolation: isolate; }
+.publications-hero::before { content: ""; position: absolute; inset: -40%; z-index: -1; background: radial-gradient(ellipse at 70% 40%, rgba(112,80,174,.38), transparent 36%), radial-gradient(ellipse at 85% 75%, rgba(52,166,162,.24), transparent 30%), repeating-linear-gradient(110deg, transparent 0 100px, rgba(173,219,215,.08) 101px 102px, transparent 103px 170px); transform: rotate(-6deg); }
+.publications-hero h1 { font: 400 clamp(3.5rem, 7vw, 6.5rem)/.95 var(--serif); letter-spacing: -.06em; margin: 24px 0; }
+.publications-hero h1 em { color: #a6e5d7; font-weight: 400; }
+.publications-hero .research-page-intro { color: #d6e3e2; max-width: 520px; }
+.archive-note { max-width: 850px; line-height: 1.75; color: var(--muted); }
+.archive-note a { color: var(--cobalt); text-decoration: underline; }
+.publication-controls { margin-top: 45px; padding: 26px 0; border-block: 1px solid var(--line); }
+.filter-buttons { display: flex; flex-wrap: wrap; gap: 9px; }
+.filter-chip { border: 1px solid var(--line); background: transparent; color: var(--ink); border-radius: 999px; padding: 10px 14px; font: 600 .76rem var(--sans); cursor: pointer; transition: background .2s, transform .2s; }
+.filter-chip:hover { transform: translateY(-2px); }
+.filter-chip.active { background: var(--ink); color: var(--paper); }
+.filter-chip span { opacity: .65; margin-left: 4px; }
+.publication-search { display: block; margin-top: 24px; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.publication-search input { display: block; width: min(100%, 420px); margin-top: 10px; padding: 13px 15px; border: 1px solid var(--line); background: transparent; color: var(--ink); font: 400 .95rem var(--sans); border-radius: 4px; }
+.publication-count { margin: 25px 0 8px; color: var(--muted); font-size: .8rem; }
+.publication-result { padding: 24px 0 26px 20px; border-bottom: 1px solid var(--line); border-left: 3px solid var(--topic); }
+.topic-1 { --topic: #8872bd; } .topic-2 { --topic: #4d9b8d; } .topic-3 { --topic: #4f86b8; } .topic-4 { --topic: #cf8b67; } .topic-5 { --topic: #a58d55; }
+.publication-result-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; font-size: .7rem; color: var(--muted); }
+.topic-label { color: var(--topic); font-weight: 700; letter-spacing: .04em; }
+.publication-result h2 { font: 400 clamp(1.3rem, 2vw, 1.7rem)/1.25 var(--serif); margin: 10px 0; }
+.publication-result h2 a:hover { color: var(--cobalt); }
+.publication-result h2 span { color: var(--topic); font-size: .7em; }
+.result-journal { font-weight: 600; font-size: .82rem; }
+.result-authors { color: var(--muted); font-size: .78rem; line-height: 1.6; margin-top: 6px; }
+.publication-empty { padding: 35px 0; }
+@media (prefers-reduced-motion: no-preference) { .publications-hero::before { animation: archive-glow 16s ease-in-out infinite alternate; } @keyframes archive-glow { from { transform: rotate(-6deg) translateX(-2%); } to { transform: rotate(-3deg) translateX(2%); } } }
+@media (prefers-reduced-motion: reduce) { .filter-chip { transition: none; } .filter-chip:hover { transform: none; } }
+/* Cinematic light, kept behind the content */
+.personal-hero { position: relative; isolation: isolate; }
+.personal-hero::before { content: ""; position: absolute; z-index: -1; pointer-events: none; inset: 3% -8% 0 38%; background: radial-gradient(ellipse at 65% 45%, rgba(89,156,148,.13), transparent 48%), radial-gradient(ellipse at 40% 70%, rgba(122,112,168,.10), transparent 40%); filter: blur(20px); }
+.personal-portrait::after { content: ""; position: absolute; width: 8px; height: 8px; top: 10%; right: 10%; background: #92d7c9; box-shadow: 0 0 16px #92d7c9; border-radius: 50%; }
+@media (prefers-reduced-motion: no-preference) { .personal-hero::before { animation: hero-atmosphere 9s ease-in-out infinite alternate; } @keyframes hero-atmosphere { from { opacity: .6; transform: scale(.96); } to { opacity: 1; transform: scale(1.04); } } }
