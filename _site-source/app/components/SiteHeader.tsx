@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 
-export default function SiteHeader() {
+export default function SiteHeader({ languageHref = "/he/" }: { languageHref?: string }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -49,27 +49,27 @@ export default function SiteHeader() {
       <span className="scroll-progress" aria-hidden="true" />
       <div className="header-identity">
         <img className="header-portrait" src="/alon-portrait.png" alt="Portrait of Alon Gorenshtein" />
-        <a className="wordmark" href="#top" aria-label="Alon Gorenshtein home">
+        <a className="wordmark" href="/#top" aria-label="Alon Gorenshtein home">
           AG<span className="wordmark-dot">.</span>
         </a>
       </div>
       <nav className="site-nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
+        <a href="/#about">About</a>
+        <a href="/#research">Research</a>
+        <a href="/#projects">Projects</a>
         <a href="/publications/">Publications</a>
       </nav>
       <button className="mobile-menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen(open => !open)}>{menuOpen ? "Close" : "Menu"}</button>
       <nav id="mobile-navigation" className="mobile-navigation" aria-label="Mobile navigation" hidden={!menuOpen}>
-        <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
-        <a href="#research" onClick={() => setMenuOpen(false)}>Research</a>
-        <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+        <a href="/#about" onClick={() => setMenuOpen(false)}>About</a>
+        <a href="/#research" onClick={() => setMenuOpen(false)}>Research</a>
+        <a href="/#projects" onClick={() => setMenuOpen(false)}>Projects</a>
         <a href="/publications/" onClick={() => setMenuOpen(false)}>Publications</a>
-        <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+        <a href="/#contact" onClick={() => setMenuOpen(false)}>Contact</a>
       </nav>
-      <a className="language-link" href="/he/" lang="he" dir="rtl">עברית</a>
+      <a className="language-link" href={languageHref} lang="he" dir="rtl">עברית</a>
       <ThemeToggle />
-      <a className="nav-contact" href="#contact">
+      <a className="nav-contact" href="/#contact">
         Get in touch <span aria-hidden="true">↗</span>
       </a>
     </header>

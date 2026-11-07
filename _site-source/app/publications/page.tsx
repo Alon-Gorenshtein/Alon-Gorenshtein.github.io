@@ -1,3 +1,4 @@
+import SiteHeader from "../components/SiteHeader";
 import type { Metadata } from "next";
 import { SITE_URL, PERSON_ID, jsonLd } from "../lib/identity";
 import { publications, articleSchema } from "../lib/publications";
@@ -12,7 +13,7 @@ export default function Publications() {
   ] };
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(graph) }} />
-    <header className="research-page-header"><a href="/">Alon Gorenshtein, MD</a><a lang="he" dir="rtl" href="/he/publications/">עברית</a><a href="/projects/">Research software ↗</a></header>
+    <SiteHeader languageHref="/he/publications/" />
     <main className="research-page"><nav className="research-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / Publications</nav>
       <div className="publications-hero"><p className="eyebrow">THE RESEARCH ARCHIVE · ALON GORENSHTEIN, MD</p><h1>Ideas in<br /><em>the literature.</em></h1><p className="research-page-intro">Explore research across clinical AI, neurology, neurotechnology, and critical care.</p></div>
       <p className="archive-note">This archive combines PubMed records matching Alon Gorenshtein’s full name with selected additional works, including preprints. Categories are a guide and some papers span multiple fields. For the broader record, visit <a href="https://scholar.google.com/citations?user=jwe8TyoAAAAJ">Google Scholar</a> or <a href="https://www.ncbi.nlm.nih.gov/myncbi/alon.gorenshtein.1/bibliography/public/">NCBI My Bibliography</a>. Preprints are labeled and have not been certified by peer review.</p>
