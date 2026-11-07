@@ -140,104 +140,29 @@ export default function Home() {
 
       <main>
 
-      <section className="personal-hero section-shell" id="top">
-        <div className="personal-hero-copy">
-          <p className="personal-kicker">PHYSICIAN-SCIENTIST · AI ENGINEER</p>
-          <h1>Hi, I’m Alon<span>.</span></h1>
-          <p className="personal-intro">I’m a physician-scientist building thoughtful AI for neurology and medicine.</p>
-          <p className="personal-note">My work brings together clinical care, research, and engineering to make intelligent systems more useful to people.</p>
-          <div className="personal-actions"><a className="personal-button" href="#about">A little more about me <span>↓</span></a><a href="#projects">Explore my work <span>↗</span></a></div>
-          <div className="personal-social"><a href="https://www.linkedin.com/in/alon-gorenshtein/">LinkedIn ↗</a><a href="https://scholar.google.com/citations?user=jwe8TyoAAAAJ">Google Scholar ↗</a><a href="https://github.com/Alon-Gorenshtein">GitHub ↗</a></div>
+      <section className="signal-hero section-shell" id="top">
+        <div className="signal-hero-main">
+          <p className="signal-overline">PHYSICIAN-SCIENTIST &amp; AI ENGINEER <span>·</span> BOSTON</p>
+          <h1>Alon<br /><span>Gorenshtein</span><small>, MD</small></h1>
+          <div className="signal-hero-bottom"><p>Building and studying AI for the moments that matter in medicine.</p><a href="#research" className="signal-link">Explore the research <span>↘</span></a></div>
         </div>
-        <figure className="personal-portrait"><img src="/alon-portrait.png" alt="Alon Gorenshtein" /><figcaption>ALON GORENSHTEIN, MD <span>·</span> BOSTON, MA</figcaption></figure>
+        <div className="signal-hero-aside"><figure className="signal-portrait"><img src="/alon-portrait.png" alt="Alon Gorenshtein" /><figcaption>Physician-scientist<br />Harvard Medical School · BIDMC</figcaption></figure><div className="signal-trace" aria-hidden="true"><svg viewBox="0 0 600 100" preserveAspectRatio="none"><path d="M0 53 H110 l12 -5 10 12 16 -34 12 56 14 -39 10 10 H260 l12 -6 10 12 14 -32 12 52 16 -37 10 11 H420 l12 -5 10 10 14 -24 12 37 14 -18 h118" /></svg><span>CLINICAL SIGNAL / HUMAN CONTEXT</span></div></div>
       </section>
 
-      <section className="intro section-shell" id="about">
-        <div className="section-label"><span>About</span></div>
-        <div className="intro-grid" data-motion-reveal>
-          <h2 className="section-title">Medicine meets<br /><em>machine intelligence.</em></h2>
-          <div className="intro-body">
-            <p className="intro-lede">
-              {biography}
-            </p>
-            <p>
-              My work spans clinical LLM evaluation, epilepsy data science,
-              brain–computer interfaces, and the design of tools that can make
-              complex clinical workflows safer and more useful. I care about
-              the moment when a promising model meets a real patient, a real
-              clinician, and a real decision.
-            </p>
-            <p>
-              Today I’m a Research Fellow at Harvard Medical School and a
-              Postdoctoral Research Fellow in the Epilepsy Division at Beth
-              Israel Deaconess Medical Center. I also lead AI Engineering at
-              BRIDGE GenAI Lab.
-            </p>
-            <p className="identity-source">Professional profile: <a href="https://hmfphysicians.org/bridge-genai-lab-advances-bidmc-radiologys-role-in-clinical-generative-ai/" target="_blank" rel="noreferrer">Harvard Medical Faculty Physicians on BRIDGE GenAI Lab</a>.</p>
-            <a className="text-link" href="https://bridgegenai.org/" target="_blank" rel="noreferrer">
-              Visit BRIDGE GenAI Lab <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </div>
+      <section className="editorial-about section-shell" id="about" data-motion-reveal>
+        <div><p className="section-index">About</p><h2>Medicine is<br /><em>human work.</em></h2></div>
+        <div className="editorial-about-copy"><p className="editorial-lead">I’m a physician-scientist and AI engineer working at the intersection of neurology, clinical research, and machine intelligence.</p><p>At Harvard Medical School and Beth Israel Deaconess Medical Center, I study how AI systems can support clinical judgment, how we evaluate them, and how they behave in real-world settings. I also lead AI engineering at BRIDGE GenAI Lab.</p><a className="signal-link" href="https://bridgegenai.org/">Discover BRIDGE GenAI Lab ↗</a></div>
       </section>
 
-      <section className="research section-dark" id="research">
-        <div className="research-inner">
-          <div className="section-label section-label-light"><span>Research focus</span></div>
-          <div className="dark-heading-row" data-motion-reveal>
-            <h2 className="section-title section-title-light">Where intelligence<br /><em>meets responsibility.</em></h2>
-            <p className="section-side-note">My work asks how intelligent systems can remain useful and answerable to people: in high-stakes clinical care, through neural interfaces, and in the objectives we give our systems.</p>
-          </div>
-          <div className="focus-manifesto" data-motion-reveal>
-            <span className="focus-manifesto-label">The connecting question</span>
-            <p>How do we build systems that extend human capability without losing human judgment?</p>
-          </div>
-          <div className="focus-grid" data-motion-reveal>
-            {focusAreas.map((area) => (
-              <a className="focus-card" href={area.href} target="_blank" rel="noreferrer" key={area.title}>
-                <h3>{area.title}</h3>
-                <p>{area.text}</p>
-                <span className="focus-arrow" aria-hidden="true">↗</span>
-              </a>
-            ))}
-          </div>
-          <div className="personal-research-links" aria-label="Research guides">{researchPages.map((page) => <a href={`/research/${page.slug}/`} key={page.slug}>{page.title} ↗</a>)}</div>
-        </div>
-      </section>
+      <section className="editorial-research" id="research"><div className="section-shell"><div className="editorial-section-head" data-motion-reveal><p className="section-index">Research focus</p><h2>From signals<br /><em>to decisions.</em></h2><p>Exploring how intelligent systems can extend human capability while remaining accountable to the people who use them.</p></div><div className="research-index" data-motion-reveal>{focusAreas.map((area, index)=><a href={area.href} key={area.title} target="_blank" rel="noreferrer"><span className="research-index-number">0{index+1}</span><div><h3>{area.title}</h3><p>{area.text}</p></div><span className="research-index-arrow" aria-hidden="true">↗</span></a>)}</div><div className="editorial-guides">{researchPages.map(page=><a href={`/research/${page.slug}/`} key={page.slug}>{page.title} ↗</a>)}</div></div></section>
 
-      <section className="section-shell research-guides" id="projects">
-        <div className="section-label"><span>Research projects</span></div>
-        <h2 className="section-title">Ideas made<br /><em>into tools.</em></h2>
-        <p className="section-side-note">Research systems and benchmarks built with collaborators to investigate clinical AI, neurology, and evidence synthesis.</p>
-        <div className="project-showcase">{projectDetails.map((project, index) => <a className={`project-tile project-tile-${project.slug}`} href={`/projects/${project.slug}/`} key={project.slug}><div className="project-tile-top"><span>RESEARCH PROJECT</span><span>0{index + 1} / 04</span></div><div className="project-visual"><ResearchGlyph kind={project.slug} /></div><div className="project-tile-content"><h3>{project.shortName}</h3><p>{project.summary}</p><span className="project-tile-link">Explore the project <span aria-hidden="true">↗</span></span></div></a>)}</div>
-        <p><a className="text-link" href="/projects/">Browse all research projects and public code →</a></p>
-      </section>
+      <section className="editorial-projects section-shell" id="projects"><div className="editorial-section-head" data-motion-reveal><p className="section-index">Research projects</p><h2>Ideas into<br /><em>practice.</em></h2><p>Tools and benchmarks built with collaborators to investigate clinical AI and neurological care.</p></div><div className="editorial-project-list">{projectDetails.map((project,index)=><a href={`/projects/${project.slug}/`} className="editorial-project" key={project.slug} data-motion-reveal><span className="project-number">0{index+1}</span><div className="editorial-project-title"><h3>{project.shortName}</h3><span>Research project</span></div><p>{project.summary}</p><span className="editorial-arrow" aria-hidden="true">↗</span></a>)}</div><a className="signal-link" href="/projects/">All projects and public code ↗</a></section>
 
-      <section className="section-shell personal-study" id="work"><p className="personal-kicker">A CLOSER LOOK</p><h2>The unsteady return of command-following</h2><p>A study of recovery after acute brain injury and the clinical context that shapes bedside interpretation.</p><a href="https://link.springer.com/article/10.1007/s12028-026-02624-x">Read the study ↗</a></section>
-      <section className="publications section-shell" id="publications">
-        <div className="section-label"><span>Selected publications</span></div>
-        <div className="pub-heading-row" data-motion-reveal>
-          <h2 className="section-title">The work,<br /><em>in the literature.</em></h2>
-          <div className="pub-heading-action"><p>Peer-reviewed research, accepted manuscripts, and ongoing work across clinical AI and neurology.</p><a className="button button-outline" href="https://scholar.google.com/citations?user=jwe8TyoAAAAJ&hl=en&inst=7575085548378563675" target="_blank" rel="noreferrer">Google Scholar <span aria-hidden="true">↗</span></a></div>
-        </div>
-        <div className="publication-list" data-motion-reveal>
-          {publications.map((publication) => (
-            <a className="publication-row" href={publication.href} target="_blank" rel="noreferrer" key={publication.title}>
-              <span className="publication-main"><span className="publication-journal">{publication.journal}</span><strong>{publication.title}</strong><span className="publication-authors">{publication.authors}</span></span>
-              <span className="publication-arrow" aria-hidden="true">↗</span>
-            </a>
-          ))}
-        </div>
-        <p className="bibliography-actions"><a className="text-link" href="/publications/">Browse selected publications and download citations →</a><a className="text-link" href="/projects/">Research software and public code →</a></p>
-        <div className="publication-footer"><span>50+ PubMed-indexed publications</span><a className="text-link" href="https://www.ncbi.nlm.nih.gov/myncbi/alon.gorenshtein.1/bibliography/public/" target="_blank" rel="noreferrer">View NCBI bibliography <span aria-hidden="true">↗</span></a></div>
-      </section>
+      <section className="editorial-study section-shell" id="work"><div><p className="section-index">In focus · Neurocritical care</p><h2>The unsteady return of command-following</h2></div><div><p>A study of recovery after acute brain injury and the clinical context that shapes bedside interpretation.</p><a href="https://link.springer.com/article/10.1007/s12028-026-02624-x" className="signal-link">Read the study ↗</a></div></section>
 
-      <section className="contact section-shell section-dark" id="contact">
-        <div className="contact-grid" data-motion-reveal>
-          <div className="contact-heading"><span className="card-kicker card-kicker-light">LET’S TALK</span><h2 className="contact-title">Good work is<br /><em>collaborative.</em></h2><p className="contact-subline">Research partnerships, clinical AI, and neurotechnology with a human point of view.</p></div>
-          <div className="contact-copy"><span className="contact-copy-label">OPEN TO CONVERSATIONS ABOUT</span><p>Hard problems in clinical AI, neurology, and neurotechnology. If the question matters to patients or the people caring for them, I’d be glad to hear from you.</p><a className="contact-email" href="mailto:agorensh@bidmc.harvard.edu"><span className="contact-email-label">Email Alon</span> agorensh@bidmc.harvard.edu <span aria-hidden="true">↗</span></a><div className="contact-links"><a href="https://www.linkedin.com/in/alon-gorenshtein/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://orcid.org/0009-0000-7542-8608" target="_blank" rel="noreferrer">ORCID</a><a href="https://github.com/Alon-Gorenshtein" target="_blank" rel="noreferrer">GitHub</a><a href="https://connects.catalyst.harvard.edu/Profiles/display/Person/227389" target="_blank" rel="noreferrer">Harvard Catalyst</a></div></div>
-        </div>
-      </section>
+      <section className="editorial-publications section-shell" id="publications"><div className="editorial-section-head" data-motion-reveal><p className="section-index">Selected publications</p><h2>Research in<br /><em>the literature.</em></h2><p>Selected work across clinical AI, neurology, and neurotechnology. Explore indexed publications by topic.</p></div><div className="editorial-publication-list">{publications.slice(0,4).map(publication=><a className="editorial-publication" href={publication.href} key={publication.title}><span>{publication.journal}</span><strong>{publication.title}</strong><span aria-hidden="true">↗</span></a>)}</div><div className="editorial-publication-footer"><a className="signal-link" href="/publications/">Explore the publication archive ↗</a><span>50+ PubMed-indexed publications</span></div></section>
+
+      <section className="editorial-contact" id="contact"><div className="section-shell"><p className="section-index">Contact</p><h2>Let’s make<br /><em>something matter.</em></h2><div className="editorial-contact-bottom"><p>For research collaborations, clinical AI, and neurotechnology.</p><a href="mailto:agorensh@bidmc.harvard.edu">agorensh@bidmc.harvard.edu ↗</a></div><div className="editorial-social"><a href="https://www.linkedin.com/in/alon-gorenshtein/">LinkedIn ↗</a><a href="https://orcid.org/0009-0000-7542-8608">ORCID ↗</a><a href="https://github.com/Alon-Gorenshtein">GitHub ↗</a><a href="https://scholar.google.com/citations?user=jwe8TyoAAAAJ">Google Scholar ↗</a></div></div></section>
 
       <footer className="site-footer section-shell"><span>Alon Gorenshtein, MD</span><span className="motto">Le vent se lève. Il faut tenter de vivre.</span><a href="#top">Back to top ↑</a></footer>
       </main>
