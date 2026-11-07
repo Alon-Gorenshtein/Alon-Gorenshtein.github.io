@@ -471,3 +471,24 @@ html.motion-ready [data-motion-reveal].is-visible { opacity: 1; transform: none;
 :root[data-theme="dark"] .personal-button { color: #101720; }
 .personal-research-links { display: flex; flex-wrap: wrap; gap: 18px 26px; margin-top: 35px; color: #e4ebe6; font-size: .82rem; }
 .personal-research-links a { border-bottom: 1px solid #82988e; padding-bottom: 4px; }
+
+/* Gentle motion and a circular portrait */
+.personal-portrait { position: relative; width: min(100%, 390px); }
+.personal-portrait::before { content: ""; position: absolute; inset: -13px -13px auto; aspect-ratio: 1; border: 1px solid color-mix(in srgb, var(--cobalt) 40%, transparent); border-radius: 50%; pointer-events: none; }
+.personal-portrait img { aspect-ratio: 1; border-radius: 50%; object-position: 50% 22%; }
+.personal-portrait figcaption { text-align: center; margin-top: 24px; }
+.personal-button, .personal-actions a, .personal-social a, .personal-research-links a { transition: transform .25s ease, color .25s ease, background-color .25s ease; }
+.personal-button:hover { transform: translateY(-3px); }
+.project-tile { transition: transform .3s ease, box-shadow .3s ease; }
+.project-tile:hover, .project-tile:focus-visible { transform: translateY(-6px); box-shadow: 0 16px 35px rgba(20, 40, 30, .12); }
+@media (prefers-reduced-motion: no-preference) {
+  .personal-hero-copy { animation: personal-enter .75s both; }
+  .personal-portrait { animation: personal-enter .9s .12s both; }
+  .personal-portrait::before { animation: ring-breathe 5s ease-in-out infinite; }
+  @keyframes personal-enter { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes ring-breathe { 0%, 100% { transform: scale(1); opacity: .65; } 50% { transform: scale(1.025); opacity: 1; } }
+}
+@media (prefers-reduced-motion: reduce) {
+  .personal-button, .personal-actions a, .personal-social a, .personal-research-links a, .project-tile { transition: none; }
+  .personal-button:hover, .project-tile:hover, .project-tile:focus-visible { transform: none; }
+}
