@@ -435,3 +435,39 @@ html.motion-ready [data-motion-reveal].is-visible { opacity: 1; transform: none;
 @media (prefers-reduced-motion: reduce) {
   .project-tile:active, .he-card:active { transform: none; }
 }
+
+/* Personal editorial refresh */
+:root { --paper: #f8f7f2; --ink: #202b29; --muted: #68716c; --line: #dedfd8; --cobalt: #477b68; --night: #233a34; }
+.site-header { min-height: 80px; background: var(--paper); }
+.scroll-progress { display: none; }
+.header-portrait { display: none; }
+.wordmark { font-size: 1.55rem; letter-spacing: -.06em; }
+.site-nav { text-transform: none; letter-spacing: 0; font-size: .85rem; font-weight: 500; }
+.personal-hero { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(40px, 9vw, 140px); align-items: center; padding: 105px 0 120px; }
+.personal-kicker { color: var(--cobalt); font-size: .68rem; font-weight: 700; letter-spacing: .14em; }
+.personal-hero h1 { margin: 25px 0 23px; font: 400 clamp(4rem, 7.7vw, 7.2rem)/.98 var(--serif); letter-spacing: -.055em; }
+.personal-hero h1 span { color: var(--cobalt); }
+.personal-intro { max-width: 640px; font: 400 clamp(1.55rem, 2.6vw, 2.2rem)/1.27 var(--serif); letter-spacing: -.025em; }
+.personal-note { max-width: 510px; margin-top: 23px; color: var(--muted); line-height: 1.75; }
+.personal-actions { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; margin-top: 32px; font-size: .85rem; font-weight: 600; }
+.personal-button { background: var(--ink); color: #fff; padding: 16px 20px; border-radius: 4px; }
+.personal-actions span { margin-left: 8px; }
+.personal-social { display: flex; flex-wrap: wrap; gap: 21px; margin-top: 45px; color: var(--muted); font-size: .78rem; }
+.personal-social a:hover, .personal-actions a:hover { color: var(--cobalt); }
+.personal-portrait { margin: 0; max-width: 430px; justify-self: end; }
+.personal-portrait img { display: block; width: 100%; aspect-ratio: 4/4.6; object-fit: cover; object-position: 50% 20%; border-radius: 180px 180px 5px 5px; }
+.personal-portrait figcaption { margin-top: 15px; color: var(--muted); font-size: .61rem; font-weight: 700; letter-spacing: .12em; }
+.personal-portrait figcaption span { padding: 0 5px; color: var(--cobalt); }
+.intro, .work, .publications, .timeline-section, .research-guides { padding-top: 95px; padding-bottom: 95px; }
+.section-title { font-size: clamp(3rem, 5.5vw, 5.3rem); }
+.research { background: #233a34; }
+.research-guide-grid, .project-showcase { margin-top: 45px; }
+.project-tile { border-radius: 5px; }
+.personal-study { border-top: 1px solid var(--line); padding: 70px 0; }
+.personal-study h2 { margin: 18px 0; font: 400 clamp(2rem, 4vw, 3.2rem)/1.1 var(--serif); }
+.personal-study p:not(.personal-kicker) { max-width: 650px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
+.personal-study a { color: var(--cobalt); font-weight: 600; }
+@media (max-width: 760px) { .personal-hero { grid-template-columns: 1fr; gap: 48px; padding: 65px 0 80px; } .personal-portrait { justify-self: start; width: min(100%, 380px); } .personal-hero h1 { font-size: clamp(3.7rem, 14vw, 5.5rem); } .intro, .publications, .research-guides { padding-top: 70px; padding-bottom: 70px; } }
+:root[data-theme="dark"] .personal-button { color: #101720; }
+.personal-research-links { display: flex; flex-wrap: wrap; gap: 18px 26px; margin-top: 35px; color: #e4ebe6; font-size: .82rem; }
+.personal-research-links a { border-bottom: 1px solid #82988e; padding-bottom: 4px; }
