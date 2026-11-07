@@ -10,7 +10,7 @@ test('publication hub renders author identity, status and citation downloads', a
   assert.ok(html.includes('Preprint'));
   assert.ok(html.includes('/citations/selected-publications.bib'));
   assert.ok(html.includes('/citations/selected-publications.ris'));
-  assert.equal((html.match(/class="bibliography-entry"/g)||[]).length,11);
+  assert.ok((html.match(/class="publication-result /g)||[]).length >= 50);
   const head = html.split('</head>')[0];
   assert.equal((head.match(/rel="canonical"/g)||[]).length,1);
   assert.ok(head.includes('href="https://alon-gorenshtein.github.io/publications/"'));
