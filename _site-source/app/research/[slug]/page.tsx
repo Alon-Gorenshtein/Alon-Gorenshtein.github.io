@@ -1,3 +1,4 @@
+import SiteHeader from "../../components/SiteHeader";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { researchPages } from "../../lib/research";
@@ -24,9 +25,9 @@ export default async function ResearchPage({ params }: Props) {
   ] };
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(graph) }} />
-    <header className="research-page-header"><a href="/">Alon Gorenshtein, MD</a><a lang="he" dir="rtl" href={`/he/research/${page.slug}/`}>עברית</a><a href="/#research-pages">All research ↗</a></header>
+    <SiteHeader languageHref={`/he/research/${page.slug}/`} />
     <main className="research-page">
-      <nav className="research-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/#research-pages">Research</a></nav>
+      <nav className="research-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/#research">Research</a></nav>
       <article>
         <p className="eyebrow">RESEARCH · ALON GORENSHTEIN, MD</p>
         <h1>{page.title}</h1>

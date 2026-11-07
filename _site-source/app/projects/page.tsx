@@ -1,3 +1,4 @@
+import SiteHeader from "../components/SiteHeader";
 import type { Metadata } from "next";
 import projects from "../lib/projects.json";
 import { projectDetails } from "../lib/project-details";
@@ -11,7 +12,7 @@ export default function Projects() {
     ...projects.map(p => ({ "@type": "SoftwareSourceCode", "@id": `${SITE_URL}/projects/#${p.slug}`, name: p.name, description: p.description, codeRepository: p.repo, url: p.repo, citation: { "@type": "ScholarlyArticle", "@id": `https://doi.org/${p.doi}`, url: `https://doi.org/${p.doi}` } }))
   ] };
   return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(graph) }} />
-    <header className="research-page-header"><a href="/">Alon Gorenshtein, MD</a><a lang="he" dir="rtl" href="/he/projects/">עברית</a><a href="/publications/">Publications ↗</a></header>
+    <SiteHeader languageHref="/he/projects/" />
     <main className="research-page"><nav className="research-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / Research software</nav>
       <p className="eyebrow">RESEARCH SOFTWARE · ALON GORENSHTEIN, MD</p><h1>From papers<br/>to public code.</h1>
       <p className="research-page-intro">Research projects in clinical AI, evidence synthesis, and neurology, developed by Alon Gorenshtein and collaborators.</p>
