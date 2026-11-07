@@ -5,6 +5,7 @@ import { projectDetails } from "./lib/project-details";
 import LiveMotion from "./components/LiveMotion";
 import SiteHeader from "./components/SiteHeader";
 import ResearchGlyph from "./components/ResearchGlyph";
+import ResearchInstrument from "./components/ResearchInstrument";
 
 const focusAreas = [
   {
@@ -148,7 +149,7 @@ export default function Home() {
             <h1>Alon<br /><span>Gorenshtein</span><small>, MD</small></h1>
             <div className="signal-hero-bottom"><p>Building and studying AI for the moments that matter in medicine.</p><a href="#research" className="signal-link">Explore the research <span>↘</span></a></div>
           </div>
-          <div className="signal-hero-aside"><figure className="signal-portrait"><img src="/alon-portrait.png" alt="Alon Gorenshtein" /><figcaption>Physician-scientist<br />Harvard Medical School · BIDMC</figcaption></figure><div className="signal-trace" aria-hidden="true"><svg viewBox="0 0 600 100" preserveAspectRatio="none"><path d="M0 53 H110 l12 -5 10 12 16 -34 12 56 14 -39 10 10 H260 l12 -6 10 12 14 -32 12 52 16 -37 10 11 H420 l12 -5 10 10 14 -24 12 37 14 -18 h118" /></svg><span>CLINICAL SIGNAL / HUMAN CONTEXT</span></div></div>
+          <div className="signal-hero-aside"><figure className="signal-portrait"><img src="/alon-portrait.png" alt="Alon Gorenshtein" /><figcaption>Physician-scientist<br />Harvard Medical School · BIDMC</figcaption></figure><ResearchInstrument /></div>
           <div className="hero-index"><span>RESEARCH AREAS</span><span>CLINICAL AI</span><span>NEUROLOGY</span><span>NEUROTECHNOLOGY</span><a href="#about">SCROLL TO EXPLORE ↓</a></div>
         </div>
       </section>
