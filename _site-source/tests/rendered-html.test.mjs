@@ -27,8 +27,8 @@ test("server-renders the Alon Gorenshtein research site", async () => {
   assert.match(html, /Neurocritical care/);
   assert.match(html, /The unsteady return of command-following/);
   assert.match(html, /s12028-026-02624-x/);
-  assert.match(html, /hero-neuro-layer/);
-  assert.match(html, /neurotech-brain-trimmed\.png/);
+  assert.match(html, /personal-hero/);
+  assert.match(html, /alon-portrait\.png/);
   assert.match(html, /theme-toggle/);
   assert.match(html, /BRIDGE GenAI Lab/);
   assert.match(html, /Selected publications/);

@@ -56,9 +56,8 @@ export default function SiteHeader() {
       <nav className="site-nav" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#research">Research</a>
-        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
         <a href="/publications/">Publications</a>
-        <a href="/projects/">Projects</a>
       </nav>
       <button className="mobile-menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen(open => !open)}>{menuOpen ? "Close" : "Menu"}</button>
       <nav id="mobile-navigation" className="mobile-navigation" aria-label="Mobile navigation" hidden={!menuOpen}>

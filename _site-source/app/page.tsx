@@ -140,34 +140,17 @@ export default function Home() {
 
       <main>
 
-      <section className="hero hero-system section-shell" id="top">
-        <HeroNeuroLayer />
-        <div className="hero-copy">
-          <p className="eyebrow reveal">PHYSICIAN-SCIENTIST · AI ENGINEER</p>
-          <h1 className="hero-title reveal reveal-delay-1">
-            Alon
-            <br />
-            <em>Gorenshtein, MD</em>
-          </h1>
-          <p className="hero-lede reveal reveal-delay-2">
-            Building human-centered AI for neurology — across neurocritical
-            care, neural interfaces, and the systems that shape clinical decisions.
-          </p>
-          <div className="hero-actions reveal reveal-delay-3">
-            <a className="button button-dark" href="#projects">
-              Explore the projects <span aria-hidden="true">↓</span>
-            </a>
-            <a className="text-link" href="#research">
-              Research focus <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-          <div className="hero-profile-links" aria-label="Professional profiles"><a href="https://bridgegenai.org/">BRIDGE GenAI Lab ↗</a><a href="https://www.linkedin.com/in/alon-gorenshtein/">LinkedIn ↗</a><a href="https://scholar.google.com/citations?user=jwe8TyoAAAAJ">Google Scholar ↗</a></div>
+      <section className="personal-hero section-shell" id="top">
+        <div className="personal-hero-copy">
+          <p className="personal-kicker">PHYSICIAN-SCIENTIST · AI ENGINEER</p>
+          <h1>Hi, I’m Alon<span>.</span></h1>
+          <p className="personal-intro">I’m a physician-scientist building thoughtful AI for neurology and medicine.</p>
+          <p className="personal-note">My work brings together clinical care, research, and engineering to make intelligent systems more useful to people.</p>
+          <div className="personal-actions"><a className="personal-button" href="#about">A little more about me <span>↓</span></a><a href="#projects">Explore my work <span>↗</span></a></div>
+          <div className="personal-social"><a href="https://www.linkedin.com/in/alon-gorenshtein/">LinkedIn ↗</a><a href="https://scholar.google.com/citations?user=jwe8TyoAAAAJ">Google Scholar ↗</a><a href="https://github.com/Alon-Gorenshtein">GitHub ↗</a></div>
         </div>
+        <figure className="personal-portrait"><img src="/alon-portrait.png" alt="Alon Gorenshtein" /><figcaption>ALON GORENSHTEIN, MD <span>·</span> BOSTON, MA</figcaption></figure>
       </section>
-
-      <div className="marquee" aria-hidden="true">
-        <span>AI MISALIGNMENT</span><i>✳</i><span>GENERATIVE AI IN BCI</span><i>✳</i><span>NEUROCRITICAL CARE</span><i>✳</i><span>DISORDERS OF CONSCIOUSNESS</span><i>✳</i>
-      </div>
 
       <section className="intro section-shell" id="about">
         <div className="section-label"><span>About</span></div>
@@ -196,26 +179,6 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="role-grid" data-motion-reveal>
-          <article className="role-card role-card-accent">
-            <span className="card-kicker">CURRENT ROLE</span>
-            <h3>Research Fellow</h3>
-            <p>Harvard Medical School<br />Department of Neurology</p>
-            <span className="card-location">Boston, Massachusetts</span>
-          </article>
-          <article className="role-card">
-            <span className="card-kicker">CURRENT ROLE</span>
-            <h3>Postdoctoral Fellow</h3>
-            <p>BIDMC Epilepsy + Data Science Lab<br />Department of Neurology</p>
-            <span className="card-location">Boston, Massachusetts</span>
-          </article>
-          <article className="role-card">
-            <span className="card-kicker">CURRENT ROLE</span>
-            <h3>Head of AI Engineering</h3>
-            <p>BRIDGE GenAI Lab<br />Safe AI. Real Medicine.</p>
-            <span className="card-location">BIDMC · DFCI · HMS</span>
-          </article>
-        </div>
       </section>
 
       <section className="research section-dark" id="research">
@@ -238,13 +201,8 @@ export default function Home() {
               </a>
             ))}
           </div>
+          <div className="personal-research-links" aria-label="Research guides">{researchPages.map((page) => <a href={`/research/${page.slug}/`} key={page.slug}>{page.title} ↗</a>)}</div>
         </div>
-      </section>
-
-      <section className="section-shell research-guides" id="research-pages">
-        <div className="section-label"><span>Research in depth</span></div>
-        <h2 className="section-title">Questions, methods,<br /><em>and evidence.</em></h2>
-        <div className="research-guide-grid">{researchPages.map((page) => <a className="research-guide" href={`/research/${page.slug}/`} key={page.slug}><h3>{page.title}</h3><p>{page.summary}</p><span className="text-link">Read the research →</span></a>)}</div>
       </section>
 
       <section className="section-shell research-guides" id="projects">
@@ -255,46 +213,7 @@ export default function Home() {
         <p><a className="text-link" href="/projects/">Browse all research projects and public code →</a></p>
       </section>
 
-      <section className="lab-spotlight section-shell" aria-labelledby="lab-spotlight-title">
-        <div className="lab-spotlight-copy"><p className="lab-kicker">A COLLABORATIVE HOME FOR CLINICAL AI</p><h2 id="lab-spotlight-title">Building better AI,<br /><em>together.</em></h2><p>At BRIDGE GenAI Lab, we study the safety, alignment, and real-world behavior of clinical AI. I lead AI engineering alongside a team of physicians and researchers.</p><a className="lab-primary-link" href="https://bridgegenai.org/">Explore BRIDGE GenAI Lab <span aria-hidden="true">↗</span></a></div>
-        <div className="lab-spotlight-aside"><div className="lab-network" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><svg viewBox="0 0 300 150" preserveAspectRatio="none"><path d="M15 113 L83 40 L155 82 L222 25 L286 95 M83 40 L222 25 M155 82 L220 130 L286 95"/></svg></div><p>FOLLOW THE WORK</p><div className="lab-links"><a href="https://www.linkedin.com/in/alon-gorenshtein/">LinkedIn <span>↗</span></a><a href="https://scholar.google.com/citations?user=jwe8TyoAAAAJ">Google Scholar <span>↗</span></a><a href="https://github.com/Alon-Gorenshtein">GitHub <span>↗</span></a><a href="https://orcid.org/0009-0000-7542-8608">ORCID <span>↗</span></a></div></div>
-      </section>
-
-      <section className="work section-shell" id="work">
-        <div className="section-label"><span>Selected work</span></div>
-        <div className="work-heading-row" data-motion-reveal>
-          <h2 className="section-title">Work grounded in<br /><em>three questions.</em></h2>
-          <p className="section-side-note">Selected studies on clinical uncertainty after acute brain injury, generative AI in neural interfaces, and evaluation beyond a narrow task objective.</p>
-        </div>
-        <div className="work-grid" data-motion-reveal>
-          {selectedWork.map((item, index) => (
-            <article className={`work-card work-card-${index + 1}`} key={item.title}>
-              <div className="work-card-top"><span>{item.label}</span></div>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-              <a className="card-link" href={item.link} target="_blank" rel="noreferrer">{item.linkText} <span aria-hidden="true">↗</span></a>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="timeline-section section-shell section-paper" id="timeline">
-        <div className="section-label"><span>Path to here</span></div>
-        <div className="timeline-heading-row" data-motion-reveal>
-          <h2 className="section-title">A nonlinear<br /><em>clinical path.</em></h2>
-          <p className="section-side-note">Medicine, engineering, and research have never been separate tracks. They are the same work viewed from different angles.</p>
-        </div>
-        <div className="timeline" data-motion-reveal>
-          {timeline.map((item) => (
-            <article className="timeline-item" key={item.title}>
-              <span className="timeline-year">{item.year}</span>
-              <div className="timeline-marker" aria-hidden="true" />
-              <div className="timeline-copy"><h3>{item.title}</h3><p>{item.text}</p></div>
-            </article>
-          ))}
-        </div>
-      </section>
-
+      <section className="section-shell personal-study" id="work"><p className="personal-kicker">A CLOSER LOOK</p><h2>The unsteady return of command-following</h2><p>A study of recovery after acute brain injury and the clinical context that shapes bedside interpretation.</p><a href="https://link.springer.com/article/10.1007/s12028-026-02624-x">Read the study ↗</a></section>
       <section className="publications section-shell" id="publications">
         <div className="section-label"><span>Selected publications</span></div>
         <div className="pub-heading-row" data-motion-reveal>
