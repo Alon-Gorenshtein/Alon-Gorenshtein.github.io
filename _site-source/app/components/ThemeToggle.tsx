@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const STORAGE_KEY = "alon-theme";
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ language = "en" }: { language?: "en" | "he" }) {
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
@@ -28,14 +28,14 @@ export default function ThemeToggle() {
     <button
       className="theme-toggle"
       type="button"
-      aria-label={dark ? "Switch to light theme" : "Switch to dark theme"}
+      aria-label={language === "he" ? (dark ? "מעבר לעיצוב בהיר" : "מעבר לעיצוב כהה") : (dark ? "Switch to light theme" : "Switch to dark theme")}
       aria-pressed={dark}
       onClick={toggleTheme}
     >
       <span className="theme-toggle-track" aria-hidden="true">
         <span className="theme-toggle-thumb" />
       </span>
-      <span className="theme-toggle-label">{dark ? "Dark" : "Light"}</span>
+      <span className="theme-toggle-label">{language === "he" ? (dark ? "כהה" : "בהיר") : (dark ? "Dark" : "Light")}</span>
     </button>
   );
 }
