@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { researchPages } from "../../lib/research";
 import { SITE_URL, PERSON_ID, jsonLd } from "../../lib/identity";
+import ResearchGlyph from "../../components/ResearchGlyph";
 
 type Props = { params: Promise<{ slug: string }> };
 export function generateStaticParams() { return researchPages.map(({ slug }) => ({ slug })); }
@@ -32,10 +33,12 @@ export default async function ResearchPage({ params }: Props) {
         <p className="eyebrow">RESEARCH · ALON GORENSHTEIN, MD</p>
         <h1>{page.title}</h1>
         <p className="research-page-intro">{page.intro}</p>
-        <section><h2>Research question</h2><p>{page.question}</p></section>
-        <section><h2>Methods and findings</h2>{page.findings.map(text => <p key={text}>{text}</p>)}</section>
+        <div className="interior-visual"><div><span>RESEARCH AREA</span><p>{page.title}</p></div><div className="interior-art"><ResearchGlyph kind={page.slug === "clinical-neurophysiology" ? "inspire" : page.slug === "clinical-ai-safety" ? "literas" : page.slug === "neurocritical-care" ? "inspire" : "neuro-copilot"} /></div></div>
+        <nav className="project-story-nav" aria-label="On this page"><span>ON THIS PAGE</span><a href="#question">The question</a><a href="#findings">Findings</a><a href="#sources">Publications</a></nav>
+        <section className="project-question" id="question"><h2>Research question</h2><p>{page.question}</p></section>
+        <section id="findings"><h2>Methods and findings</h2>{page.findings.map(text => <p key={text}>{text}</p>)}</section>
         <section><h2>Authorship</h2><p>{page.role}</p></section>
-        <section><h2>Publications and sources</h2><ul className="research-paper-list">{page.papers.map(p => <li key={p.doi}><a href={`https://doi.org/${p.doi}`}>{p.title}</a><p>{p.authors.join(", ")}. <em>{p.journal}</em> ({p.year}).</p><span className="research-doi">DOI: {p.doi}</span></li>)}</ul>{page.extraLink && <p><a href={page.extraLink.url}>{page.extraLink.label} ↗</a></p>}</section>
+        <section id="sources"><h2>Publications and sources</h2><ul className="research-paper-list">{page.papers.map(p => <li key={p.doi}><a href={`https://doi.org/${p.doi}`}>{p.title}</a><p>{p.authors.join(", ")}. <em>{p.journal}</em> ({p.year}).</p><span className="research-doi">DOI: {p.doi}</span></li>)}</ul>{page.extraLink && <p><a href={page.extraLink.url}>{page.extraLink.label} ↗</a></p>}</section>
         <p className="research-updated">Research summary updated October 26, 2026.</p>
       </article>
       <aside className="research-related"><h2>Explore related research</h2>{researchPages.filter(p => p.slug !== page.slug).map(p => <a key={p.slug} href={`/research/${p.slug}/`}>{p.title} →</a>)}</aside>
