@@ -153,6 +153,20 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="affiliations section-shell" aria-labelledby="affiliations-title">
+        <div className="affiliations-head"><p className="section-index">Affiliations</p><h2 id="affiliations-title">Where I work and trained.</h2></div>
+        <div className="affiliation-primary">
+          <a href="https://bridgegenai.org/" className="affiliation-card affiliation-bridge"><span className="affiliation-logo"><img src="/affiliations/bridge.svg" alt="" /><strong>BRIDGE <small>GenAI Lab</small></strong></span><span>Head of AI Engineering ↗</span></a>
+          <a href="https://www.bidmc.org/" className="affiliation-card"><span className="affiliation-logo"><img src="/affiliations/bidmc.svg" alt="Beth Israel Deaconess Medical Center" /></span><span>Postdoctoral research ↗</span></a>
+          <a href="https://hms.harvard.edu/" className="affiliation-card"><span className="affiliation-logo affiliation-text">Harvard<br />Medical School</span><span>Research fellow ↗</span></a>
+        </div>
+        <div className="affiliation-history"><div><h3>Earlier training &amp; research</h3><p>Medical education and research in Israel.</p></div><div className="affiliation-history-logos">
+          <a href="https://www.biu.ac.il/en"><img src="/affiliations/bar-ilan.svg" alt="" /><span>Bar-Ilan University · MD</span></a>
+          <a href="https://www.rambam.org.il/en/"><img src="/affiliations/rambam.svg" alt="" /><span>Rambam Health Care Campus</span></a>
+          <a href="https://www.technion.ac.il/en/"><img src="/affiliations/technion.png" alt="" /><span>Technion</span></a>
+        </div></div>
+      </section>
+
       <section className="editorial-about section-shell" id="about" data-motion-reveal>
         <div><p className="section-index">About</p><h2>Medicine is<br /><em>human work.</em></h2></div>
         <div className="editorial-about-copy"><p className="editorial-lead">I’m Alon Gorenshtein (אלון גורנשטיין), a physician-scientist and AI engineer working at the intersection of neurology, clinical research, and machine intelligence.</p><p>At Harvard Medical School and Beth Israel Deaconess Medical Center, I study how AI systems can support clinical judgment, how we evaluate them, and how they behave in real-world settings. I also lead AI engineering at BRIDGE GenAI Lab.</p><div className="identity-links"><a className="signal-link" href="https://bridgegenai.org/">Discover BRIDGE GenAI Lab ↗</a><a className="signal-link" href="https://connects.catalyst.harvard.edu/Profiles/display/Person/227389">Harvard profile ↗</a><a className="signal-link" href="/he/" lang="he" dir="rtl">האתר בעברית ←</a></div></div>
