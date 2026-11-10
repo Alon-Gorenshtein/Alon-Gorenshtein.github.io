@@ -34,7 +34,7 @@ export default async function ResearchPage({ params }: Props) {
         <p className="eyebrow">RESEARCH · ALON GORENSHTEIN, MD</p>
         <h1>{page.title}</h1>
         <p className="research-page-intro">{page.intro}</p>
-        <div className="interior-visual"><div><span>RESEARCH AREA</span><p>{page.title}</p></div><div className="interior-art"><ResearchGlyph kind={page.slug === "clinical-neurophysiology" ? "inspire" : page.slug === "clinical-ai-safety" ? "literas" : page.slug === "neurocritical-care" ? "inspire" : "neuro-copilot"} /></div></div>
+        <div className="interior-visual"><div><span>RESEARCH AREA</span><p>{page.title}</p></div><div className="interior-art"><ResearchGlyph kind={page.slug === "clinical-neurophysiology" ? "inspire" : page.slug === "clinical-ai-safety" ? "ai-safety" : page.slug === "neurocritical-care" ? "neurocritical-care" : page.slug === "brain-computer-interfaces" ? "bci" : "ai-safety"} /></div></div>
         <StoryNav links={[{ id: "question", label: "The question" }, { id: "findings", label: "Findings" }, { id: "sources", label: "Publications" }]} />
         <section className="project-question" id="question"><h2>Research question</h2><p>{page.question}</p></section>
         <section id="findings"><h2>Methods and findings</h2>{page.findings.map(text => <p key={text}>{text}</p>)}</section>

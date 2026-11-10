@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE_URL, PERSON_ID, person, biography, jsonLd } from "./lib/identity";
+import { SITE_URL, PERSON_ID, person, jsonLd } from "./lib/identity";
 import { researchPages } from "./lib/research";
 import { projectDetails } from "./lib/project-details";
 import SiteHeader from "./components/SiteHeader";
@@ -21,97 +21,6 @@ const focusAreas = [
     title: "Neurocritical care & consciousness",
     text: "Neurocritical care and disorders of consciousness, where clinical examination, recovery, and uncertainty meet at the bedside.",
     href: "https://link.springer.com/article/10.1007/s12028-026-02624-x",
-  },
-];
-
-const selectedWork = [
-  {
-    label: "AI misalignment",
-    title: "When systems meet human context",
-    text: "Evaluating whether clinical AI remains aligned with patient needs, clinician judgment, and the responsibilities that matter beyond a narrow task objective.",
-    link: "https://doi.org/10.1038/s41591-026-04350-5",
-    linkText: "Read the paper",
-  },
-  {
-    label: "Generative AI in BCI",
-    title: "Language models for communication and control",
-    text: "A systematic review of how large language models are being integrated into brain–computer interfaces for assistive communication and control.",
-    link: "https://pubmed.ncbi.nlm.nih.gov/42202831/",
-    linkText: "PubMed record",
-  },
-  {
-    label: "Neurocritical care",
-    title: "The unsteady return of command-following",
-    text: "A large-cohort study showing how bedside command-following after acute brain injury can return early and fluctuate, with sedation providing important context for interpretation.",
-    link: "https://link.springer.com/article/10.1007/s12028-026-02624-x",
-    linkText: "Neurocritical Care",
-  },
-];
-
-const timeline = [
-  {
-    year: "2026—",
-    title: "Harvard Medical School · BIDMC",
-    text: "Research Fellow and Postdoctoral Research Fellow in Neurology, Epilepsy Division. Head of AI Engineering at BRIDGE GenAI Lab.",
-  },
-  {
-    year: "2025—26",
-    title: "Icahn School of Medicine at Mount Sinai",
-    text: "Research Fellow in the Windreich Department of AI & Human Health, developing AI-agent methods for clinical workflows.",
-  },
-  {
-    year: "2024—26",
-    title: "Rambam Health Care Campus · AI in Neurology Lab",
-    text: "Researcher in the AI in Neurology Lab, building INSPIRE and Neuro-Copilot across clinical neurophysiology and decision support.",
-  },
-  {
-    year: "2022—25",
-    title: "Bar-Ilan University · Azrieli Faculty of Medicine",
-    text: "Doctor of Medicine, with research across neurology, neuroimmunology, clinical AI, and medical evidence synthesis.",
-  },
-  {
-    year: "2019—22",
-    title: "University of Debrecen · Faculty of Medicine",
-    text: "Preclinical medicine and teaching assistant in neuroanatomy, leading cadaveric laboratories and tutorials.",
-  },
-];
-
-const publications = [
-  {
-    journal: "Nature Medicine · 2026",
-    title: "How to meaningfully evaluate AI in clinical medicine",
-    authors: "Omar M, Agbareia R, Gorenshtein A, et al.",
-    href: "https://doi.org/10.1038/s41591-026-04350-5",
-  },
-  {
-    journal: "medRxiv · 2025 · Preprint version",
-    title: "AI Agents in Clinical Medicine: A Systematic Review",
-    authors: "Gorenshtein A, Omar M, Glicksberg BS, et al.",
-    href: "https://doi.org/10.1101/2025.08.22.25334232",
-  },
-  {
-    journal: "Biomedical Physics & Engineering Express · 2026",
-    title: "Large language models integrated into brain–computer interfaces for communication and control",
-    authors: "Gorenshtein A, Omar M, Barash Y, et al.",
-    href: "https://doi.org/10.1088/2057-1976/ae737b",
-  },
-  {
-    journal: "Clinical Neurophysiology · 2025",
-    title: "Agent-guided AI-powered interpretation and reporting of nerve conduction studies and EMG",
-    authors: "Gorenshtein A, Sorka M, Khateb M, Aran D, Shelly S.",
-    href: "https://doi.org/10.1016/j.clinph.2025.2110792",
-  },
-  {
-    journal: "PLOS Digital Health · 2025",
-    title: "A multi-agent approach to neurological clinical reasoning",
-    authors: "Sorka M, Gorenshtein A, Aran D, Shelly S.",
-    href: "https://doi.org/10.1371/journal.pdig.0001106",
-  },
-  {
-    journal: "Journal of Neurology · 2025",
-    title: "AI-based EMG reporting: a randomized controlled trial",
-    authors: "Gorenshtein A, Weisblat Y, Khateb M, et al.",
-    href: "https://doi.org/10.1007/s00415-025-13261-3",
   },
 ];
 
@@ -161,8 +70,8 @@ export default function Home() {
             <a href="https://hms.harvard.edu/" className="affiliation-card affiliation-hms"><span className="affiliation-orbit affiliation-orbit-three" aria-hidden="true" /><span className="affiliation-logo"><img src="/affiliations/hms-logo.png" alt="Harvard Medical School" /></span><span className="affiliation-role"><i>03</i> Research fellow <b aria-hidden="true">↗</b></span></a>
           </div>
           <div className="affiliation-history"><div className="affiliation-history-copy"><span className="affiliation-history-index">EARLIER CHAPTERS</span><h3>Training and research<br />across Israel.</h3><p>Medical education and collaborations that shaped the work.</p></div><div className="affiliation-history-logos">
-            <a href="https://www.biu.ac.il/en"><img src="/affiliations/bar-ilan.svg" alt="" /><span><b>Bar-Ilan</b><small>MD · Medicine</small></span><i aria-hidden="true">↗</i></a>
-            <a href="https://www.rambam.org.il/en/"><img src="/affiliations/rambam.svg" alt="" /><span><b>Rambam</b><small>Clinical research</small></span><i aria-hidden="true">↗</i></a>
+            <a href="https://www.biu.ac.il/en/"><img src="/affiliations/bar-ilan-en.svg" alt="" /><span><b>Bar-Ilan</b><small>MD · Medicine</small></span><i aria-hidden="true">↗</i></a>
+            <a href="https://www.rambam.org.il/en/" className="affiliation-history-rambam"><span className="affiliation-rambam-lockup"><img src="/affiliations/rambam-mark.svg" alt=""/><span><b>RAMBAM</b><small>Health Care Campus</small></span></span><span><small>Clinical research</small></span><i aria-hidden="true">↗</i></a>
             <a href="https://www.technion.ac.il/en/"><img src="/affiliations/technion.png" alt="" /><span><b>Technion</b><small>Research collaboration</small></span><i aria-hidden="true">↗</i></a>
           </div></div>
           <div className="affiliation-endnote"><span>ONE CONTINUOUS QUESTION</span><b>How can technology support better care?</b><span className="affiliation-endnote-signal" aria-hidden="true">···</span></div>
@@ -171,16 +80,14 @@ export default function Home() {
 
       <section className="editorial-about section-shell" id="about" data-motion-reveal>
         <div><p className="section-index">About</p><h2>Medicine is<br /><em>human work.</em></h2></div>
-        <div className="editorial-about-copy"><p className="editorial-lead">I’m Alon Gorenshtein (אלון גורנשטיין), a physician-scientist and AI engineer working at the intersection of neurology, clinical research, and machine intelligence.</p><p>At Harvard Medical School and Beth Israel Deaconess Medical Center, I study how AI systems can support clinical judgment, how we evaluate them, and how they behave in real-world settings. I also lead AI engineering at BRIDGE GenAI Lab.</p><div className="identity-links"><a className="signal-link" href="https://bridgegenai.org/">Discover BRIDGE GenAI Lab ↗</a><a className="signal-link" href="https://connects.catalyst.harvard.edu/Profiles/display/Person/227389">Harvard profile ↗</a><a className="signal-link" href="/he/" lang="he" dir="rtl">האתר בעברית ←</a></div></div>
+        <div className="editorial-about-copy"><p className="editorial-lead">I’m Alon Gorenshtein (אלון גורנשטיין), a physician-scientist and AI engineer working at the intersection of neurology, clinical research, and machine intelligence.</p><p>My work asks how AI systems can support clinical judgment, how to evaluate them, and how they behave in real-world settings.</p><div className="identity-links"><a className="signal-link" href="https://bridgegenai.org/">Discover BRIDGE GenAI Lab ↗</a><a className="signal-link" href="https://connects.catalyst.harvard.edu/Profiles/display/Person/227389">Harvard profile ↗</a><a className="signal-link" href="/he/" lang="he" dir="rtl">האתר בעברית ←</a></div></div>
       </section>
 
-      <section className="editorial-research" id="research"><div className="section-shell"><div className="editorial-section-head" data-motion-reveal><p className="section-index">Research focus</p><h2>From signals<br /><em>to decisions.</em></h2><p>Exploring how intelligent systems can extend human capability while remaining accountable to the people who use them.</p></div><div className="research-index" data-motion-reveal>{focusAreas.map((area, index)=><a href={area.href} key={area.title} target="_blank" rel="noreferrer"><div className="research-art"><ResearchGlyph kind={["literas", "neuro-copilot", "inspire"][index]} /></div><span className="research-index-number">0{index+1} / RESEARCH AREA</span><div><h3>{area.title}</h3><p>{area.text}</p></div><span className="research-index-arrow" aria-hidden="true">↗</span></a>)}</div><div className="editorial-guides">{researchPages.map(page=><a href={`/research/${page.slug}/`} key={page.slug}>{page.title} ↗</a>)}</div></div></section>
+      <section className="editorial-research" id="research"><div className="section-shell"><div className="editorial-section-head" data-motion-reveal><p className="section-index">Research focus</p><h2>From signals<br /><em>to decisions.</em></h2><p>Exploring how intelligent systems can extend human capability while remaining accountable to the people who use them.</p></div><div className="research-index" data-motion-reveal>{focusAreas.map((area, index)=><a href={area.href} key={area.title} target="_blank" rel="noreferrer"><div className="research-art"><ResearchGlyph kind={["ai-safety", "bci", "neurocritical-care"][index]} /></div><span className="research-index-number">0{index+1} / RESEARCH AREA</span><div><h3>{area.title}</h3><p>{area.text}</p></div><span className="research-index-arrow" aria-hidden="true">↗</span></a>)}</div><div className="editorial-guides">{researchPages.map(page=><a href={`/research/${page.slug}/`} key={page.slug}>{page.title} ↗</a>)}</div></div></section>
 
       <section className="editorial-projects section-shell" id="projects"><div className="editorial-section-head" data-motion-reveal><p className="section-index">Research projects</p><h2>Ideas into<br /><em>practice.</em></h2><p>Tools and benchmarks built with collaborators to investigate clinical AI and neurological care.</p></div><div className="editorial-project-list">{projectDetails.map((project,index)=><a href={`/projects/${project.slug}/`} className="editorial-project" key={project.slug} data-motion-reveal><span className="project-number">0{index+1}</span><div className="editorial-project-figure"><ProjectFigure kind={project.slug} compact /></div><div className="editorial-project-title"><h3>{project.shortName}</h3><span>Research project</span><p>{project.summary}</p></div><span className="editorial-arrow" aria-hidden="true">↗</span></a>)}</div><a className="signal-link" href="/projects/">All projects and public code ↗</a></section>
 
-      <section className="editorial-study section-shell" id="work"><div><p className="section-index">In focus · Neurocritical care</p><h2>The unsteady return of command-following</h2></div><div><p>A study of recovery after acute brain injury and the clinical context that shapes bedside interpretation.</p><a href="https://link.springer.com/article/10.1007/s12028-026-02624-x" className="signal-link">Read the study ↗</a></div></section>
-
-      <section className="editorial-publications section-shell" id="publications"><div className="editorial-section-head" data-motion-reveal><p className="section-index">Selected publications</p><h2>Research in<br /><em>the literature.</em></h2><p>Selected work across clinical AI, neurology, and neurotechnology. Explore indexed publications by topic.</p></div><div className="editorial-publication-list">{publications.slice(0,4).map(publication=><a className="editorial-publication" href={publication.href} key={publication.title}><span>{publication.journal}</span><strong>{publication.title}</strong><span aria-hidden="true">↗</span></a>)}</div><div className="editorial-publication-footer"><a className="signal-link" href="/publications/">Explore the publication archive ↗</a><span>50+ PubMed-indexed publications</span></div></section>
+      <section className="editorial-publications section-shell" id="publications"><div className="editorial-section-head" data-motion-reveal><p className="section-index">Publications</p><h2>Research in<br /><em>the literature.</em></h2><p>More than 50 PubMed-indexed publications across clinical AI, neurology, epilepsy, and neurotechnology.</p></div><div className="editorial-publication-footer"><a className="signal-link" href="/publications/">Browse the full publication archive by topic ↗</a><a className="signal-link" href="https://scholar.google.com/citations?user=jwe8TyoAAAAJ">Google Scholar ↗</a></div></section>
 
       <section className="editorial-contact" id="contact"><div className="section-shell"><p className="section-index">Contact</p><h2>Let’s make<br /><em>something matter.</em></h2><div className="editorial-contact-bottom"><p>For research collaborations, clinical AI, and neurotechnology.</p><a href="mailto:agorensh@bidmc.harvard.edu">agorensh@bidmc.harvard.edu ↗</a></div><div className="editorial-social"><a href="https://www.linkedin.com/in/alon-gorenshtein/">LinkedIn ↗</a><a href="https://orcid.org/0009-0000-7542-8608">ORCID ↗</a><a href="https://github.com/Alon-Gorenshtein">GitHub ↗</a><a href="https://scholar.google.com/citations?user=jwe8TyoAAAAJ">Google Scholar ↗</a></div></div></section>
 
