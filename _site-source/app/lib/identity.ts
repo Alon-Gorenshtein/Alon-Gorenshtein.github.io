@@ -17,7 +17,8 @@ export const person = {
     "https://www.linkedin.com/in/alon-gorenshtein/",
     "https://github.com/Alon-Gorenshtein",
     "https://scholar.google.com/citations?user=jwe8TyoAAAAJ",
-    "https://connects.catalyst.harvard.edu/Profiles/display/Person/227389"
+    "https://connects.catalyst.harvard.edu/Profiles/display/Person/227389",
+    "https://www.researchgate.net/profile/Alon-Gorenshtein"
   ]
 };
 export function jsonLd(value: unknown) { return JSON.stringify(value).replace(/</g, "\\u003c"); }

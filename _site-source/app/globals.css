@@ -746,3 +746,19 @@ body { overflow-x:clip; }
  .instrument-controls button { min-height:44px; }
  .hero-index { margin-top:55px; }
 }
+/* Research explorer: each choice leads from a real question to published work. */
+.instrument-controls { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); border-top:0; border-bottom:1px solid rgba(173,225,217,.3); }
+.instrument-controls button { display:flex; align-items:center; gap:8px; text-align:left; min-height:44px; font-size:.74rem; border-bottom:1px solid rgba(173,225,217,.22); }
+.instrument-controls button span { font-size:.65rem; opacity:.7; }
+.instrument-display { min-height:0; padding:17px; }
+.instrument-label { color:#add2c9; font-size:.65rem; letter-spacing:.08em; font-weight:700; }
+.instrument-question { font:400 1.13rem/1.25 var(--serif); color:#f1faf6; margin:7px 0 15px; }
+.instrument-evidence { border-left:2px solid #8fd9ca; padding-left:10px; margin-bottom:15px; }
+.instrument-evidence a { display:block; color:#eef8f5; font-size:.78rem; line-height:1.4; margin-top:5px; }
+.instrument-explore { color:#a6e9d9; font-size:.78rem; font-weight:650; border-bottom:1px solid #77bdb0; padding-bottom:4px; }
+.identity-links { display:flex; flex-wrap:wrap; gap:15px 22px; }
+@media (min-width:761px) { .signal-hero-inner { padding-top:50px; } .signal-portrait { width:100px; } .signal-hero-aside { gap:12px; } .hero-index { margin-top:35px; } }
+.instrument-header, .instrument-label { font-size:.75rem; }
+.instrument-controls button { font-size:.83rem; min-height:48px; }
+.instrument-controls button span { font-size:.75rem; }
+.instrument-evidence a, .instrument-explore { font-size:.85rem; }
