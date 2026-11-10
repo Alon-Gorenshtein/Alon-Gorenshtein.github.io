@@ -12,7 +12,8 @@ test('English and Hebrew homepages connect the same identity and language versio
     assert.match(html, /hrefLang="he"/);
     assert.match(html, /hrefLang="en"/);
   }
-  assert.match(en, /RESEARCH EXPLORER/);
+  assert.match(en, /signal-portrait/);
+  assert.doesNotMatch(en, /RESEARCH EXPLORER/);
   assert.match(en, /How to meaningfully evaluate AI in clinical medicine/);
   assert.match(en, /10\.1038\/s41591-026-04350-5/);
 });

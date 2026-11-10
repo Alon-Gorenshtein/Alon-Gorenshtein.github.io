@@ -5,7 +5,6 @@ import { projectDetails } from "./lib/project-details";
 import LiveMotion from "./components/LiveMotion";
 import SiteHeader from "./components/SiteHeader";
 import ResearchGlyph from "./components/ResearchGlyph";
-import ResearchInstrument from "./components/ResearchInstrument";
 
 const focusAreas = [
   {
@@ -149,7 +148,7 @@ export default function Home() {
             <h1>Alon<br /><span>Gorenshtein</span><small>, MD</small></h1>
             <div className="signal-hero-bottom"><p>Building and studying AI for the moments that matter in medicine.</p><a href="#research" className="signal-link">Explore the research <span>↘</span></a></div>
           </div>
-          <div className="signal-hero-aside"><figure className="signal-portrait"><img src="/alon-portrait.png" alt="Alon Gorenshtein" /><figcaption>Physician-scientist<br />Harvard Medical School · BIDMC</figcaption></figure><ResearchInstrument /></div>
+          <div className="signal-hero-aside"><figure className="signal-portrait"><div className="portrait-frame"><img src="/alon-portrait.png" alt="Alon Gorenshtein" /></div><figcaption><span>Alon Gorenshtein, MD</span><span>Harvard Medical School · BIDMC</span></figcaption></figure></div>
           <div className="hero-index"><span>RESEARCH AREAS</span><span>CLINICAL AI</span><span>NEUROLOGY</span><span>NEUROTECHNOLOGY</span><a href="#about">SCROLL TO EXPLORE ↓</a></div>
         </div>
       </section>
@@ -159,7 +158,7 @@ export default function Home() {
         <div className="editorial-about-copy"><p className="editorial-lead">I’m Alon Gorenshtein (אלון גורנשטיין), a physician-scientist and AI engineer working at the intersection of neurology, clinical research, and machine intelligence.</p><p>At Harvard Medical School and Beth Israel Deaconess Medical Center, I study how AI systems can support clinical judgment, how we evaluate them, and how they behave in real-world settings. I also lead AI engineering at BRIDGE GenAI Lab.</p><div className="identity-links"><a className="signal-link" href="https://bridgegenai.org/">Discover BRIDGE GenAI Lab ↗</a><a className="signal-link" href="https://connects.catalyst.harvard.edu/Profiles/display/Person/227389">Harvard profile ↗</a><a className="signal-link" href="/he/" lang="he" dir="rtl">האתר בעברית ←</a></div></div>
       </section>
 
-      <section className="editorial-research" id="research"><div className="section-shell"><div className="editorial-section-head" data-motion-reveal><p className="section-index">Research focus</p><h2>From signals<br /><em>to decisions.</em></h2><p>Exploring how intelligent systems can extend human capability while remaining accountable to the people who use them.</p></div><div className="research-index" data-motion-reveal>{focusAreas.map((area, index)=><a href={area.href} key={area.title} target="_blank" rel="noreferrer"><span className="research-index-number">0{index+1}</span><div><h3>{area.title}</h3><p>{area.text}</p></div><span className="research-index-arrow" aria-hidden="true">↗</span></a>)}</div><div className="editorial-guides">{researchPages.map(page=><a href={`/research/${page.slug}/`} key={page.slug}>{page.title} ↗</a>)}</div></div></section>
+      <section className="editorial-research" id="research"><div className="section-shell"><div className="editorial-section-head" data-motion-reveal><p className="section-index">Research focus</p><h2>From signals<br /><em>to decisions.</em></h2><p>Exploring how intelligent systems can extend human capability while remaining accountable to the people who use them.</p></div><div className="research-index" data-motion-reveal>{focusAreas.map((area, index)=><a href={area.href} key={area.title} target="_blank" rel="noreferrer"><div className="research-art"><ResearchGlyph kind={["literas", "neuro-copilot", "inspire"][index]} /></div><span className="research-index-number">0{index+1} / RESEARCH AREA</span><div><h3>{area.title}</h3><p>{area.text}</p></div><span className="research-index-arrow" aria-hidden="true">↗</span></a>)}</div><div className="editorial-guides">{researchPages.map(page=><a href={`/research/${page.slug}/`} key={page.slug}>{page.title} ↗</a>)}</div></div></section>
 
       <section className="editorial-projects section-shell" id="projects"><div className="editorial-section-head" data-motion-reveal><p className="section-index">Research projects</p><h2>Ideas into<br /><em>practice.</em></h2><p>Tools and benchmarks built with collaborators to investigate clinical AI and neurological care.</p></div><div className="editorial-project-list">{projectDetails.map((project,index)=><a href={`/projects/${project.slug}/`} className="editorial-project" key={project.slug} data-motion-reveal><span className="project-number">0{index+1}</span><div className="editorial-project-title"><h3>{project.shortName}</h3><span>Research project</span></div><p>{project.summary}</p><span className="editorial-arrow" aria-hidden="true">↗</span></a>)}</div><a className="signal-link" href="/projects/">All projects and public code ↗</a></section>
 
