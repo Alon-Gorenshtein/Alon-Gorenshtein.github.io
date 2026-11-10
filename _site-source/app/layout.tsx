@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "./lib/identity";
 import "./globals.css";
+import LiveMotion from "./components/LiveMotion";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -18,5 +19,5 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title: "Alon Gorenshtein, MD — Physician-Scientist & AI Engineer", description: "Clinical AI safety, neurology, and neurotechnology research.", images: [`${SITE_URL}/og.png`] },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body>{children}</body></html>;
+  return <html lang="en"><body><LiveMotion />{children}</body></html>;
 }

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { projectDetails } from "../../lib/project-details";
 import { SITE_URL, PERSON_ID, jsonLd } from "../../lib/identity";
 import ResearchGlyph from "../../components/ResearchGlyph";
+import StoryNav from "../../components/StoryNav";
 
 type Props = { params: Promise<{ slug: string }> };
 export function generateStaticParams() { return projectDetails.map(({ slug }) => ({ slug })); }
@@ -26,7 +27,7 @@ export default async function ProjectPage({ params }: Props) {
     <main className="research-page"><nav className="research-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/projects/">Projects</a> / {p.shortName}</nav>
       <article><p className="eyebrow">RESEARCH PROJECT · ALON GORENSHTEIN, MD</p><h1>{p.title}</h1><p className="research-page-intro">{p.intro}</p>
         <div className="project-story-banner"><div><span>RESEARCH / {p.shortName}</span><p>From clinical questions to evidence and tools.</p></div><div className="project-story-art"><ResearchGlyph kind={p.slug} /></div></div>
-        <nav className="project-story-nav" aria-label="On this page"><span>ON THIS PAGE</span><a href="#project-question">The question</a><a href="#project-evidence">The evidence</a><a href="#project-sources">Sources</a></nav>
+        <StoryNav links={[{ id: "project-question", label: "The question" }, { id: "project-evidence", label: "The evidence" }, { id: "project-sources", label: "Sources" }]} />
         <section className="project-question" id="project-question"><h2>Research question</h2><p>{p.question}</p></section>
         <section id="project-evidence"><h2>Approach and evidence</h2>{p.methods.map(text => <p key={text}>{text}</p>)}</section>
         <section><h2>Authors and contributions</h2><p>{p.role}</p></section>

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { researchPages } from "../../lib/research";
 import { SITE_URL, PERSON_ID, jsonLd } from "../../lib/identity";
 import ResearchGlyph from "../../components/ResearchGlyph";
+import StoryNav from "../../components/StoryNav";
 
 type Props = { params: Promise<{ slug: string }> };
 export function generateStaticParams() { return researchPages.map(({ slug }) => ({ slug })); }
@@ -34,7 +35,7 @@ export default async function ResearchPage({ params }: Props) {
         <h1>{page.title}</h1>
         <p className="research-page-intro">{page.intro}</p>
         <div className="interior-visual"><div><span>RESEARCH AREA</span><p>{page.title}</p></div><div className="interior-art"><ResearchGlyph kind={page.slug === "clinical-neurophysiology" ? "inspire" : page.slug === "clinical-ai-safety" ? "literas" : page.slug === "neurocritical-care" ? "inspire" : "neuro-copilot"} /></div></div>
-        <nav className="project-story-nav" aria-label="On this page"><span>ON THIS PAGE</span><a href="#question">The question</a><a href="#findings">Findings</a><a href="#sources">Publications</a></nav>
+        <StoryNav links={[{ id: "question", label: "The question" }, { id: "findings", label: "Findings" }, { id: "sources", label: "Publications" }]} />
         <section className="project-question" id="question"><h2>Research question</h2><p>{page.question}</p></section>
         <section id="findings"><h2>Methods and findings</h2>{page.findings.map(text => <p key={text}>{text}</p>)}</section>
         <section><h2>Authorship</h2><p>{page.role}</p></section>

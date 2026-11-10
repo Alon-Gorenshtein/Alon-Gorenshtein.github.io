@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { SITE_URL, PERSON_ID, person, biography, jsonLd } from "./lib/identity";
 import { researchPages } from "./lib/research";
 import { projectDetails } from "./lib/project-details";
-import LiveMotion from "./components/LiveMotion";
 import SiteHeader from "./components/SiteHeader";
 import ResearchGlyph from "./components/ResearchGlyph";
 
@@ -136,8 +135,6 @@ export default function Home() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd({ "@context": "https://schema.org", "@graph": [person, { "@type": "ProfilePage", "@id": `${SITE_URL}/#profile`, url: `${SITE_URL}/`, name: "Alon Gorenshtein, MD", mainEntity: { "@id": PERSON_ID } }] }) }} />
       <SiteHeader />
-      <LiveMotion />
-
       <main>
 
       <section className="signal-hero" id="top">
