@@ -4,6 +4,7 @@ import { researchPages } from "./lib/research";
 import { projectDetails } from "./lib/project-details";
 import SiteHeader from "./components/SiteHeader";
 import ResearchGlyph from "./components/ResearchGlyph";
+import ProjectFigure from "./components/ProjectFigure";
 
 const focusAreas = [
   {
@@ -150,18 +151,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="affiliations section-shell" aria-labelledby="affiliations-title">
-        <div className="affiliations-head"><p className="section-index">Affiliations</p><h2 id="affiliations-title">Where I work and trained.</h2></div>
-        <div className="affiliation-primary">
-          <a href="https://bridgegenai.org/" className="affiliation-card affiliation-bridge"><span className="affiliation-logo"><img src="/affiliations/bridge.svg" alt="" /><strong>BRIDGE <small>GenAI Lab</small></strong></span><span>Head of AI Engineering ↗</span></a>
-          <a href="https://www.bidmc.org/" className="affiliation-card"><span className="affiliation-logo"><img src="/affiliations/bidmc.svg" alt="Beth Israel Deaconess Medical Center" /></span><span>Postdoctoral research ↗</span></a>
-          <a href="https://hms.harvard.edu/" className="affiliation-card"><span className="affiliation-logo affiliation-text">Harvard<br />Medical School</span><span>Research fellow ↗</span></a>
+      <section className="affiliations" aria-labelledby="affiliations-title">
+        <svg className="affiliation-circuit" viewBox="0 0 1440 620" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-40 420C180 420 160 160 380 160S590 420 790 420s200-260 410-260 180 190 300 190"/><path d="M-40 480C180 480 200 220 390 220s210 260 400 260 220-220 420-220 170 150 290 150"/><circle cx="380" cy="160" r="5"/><circle cx="790" cy="420" r="5"/><circle cx="1200" cy="160" r="5"/><circle cx="390" cy="220" r="3"/><circle cx="790" cy="480" r="3"/><circle cx="1210" cy="260" r="3"/></svg>
+        <div className="affiliations-inner section-shell">
+          <div className="affiliations-head"><div><p className="section-index">A connected practice</p><h2 id="affiliations-title">Medicine, research<br /><em>and engineering.</em></h2></div><span className="affiliation-coordinate">BOSTON · HAIFA · GLOBAL COLLABORATION</span></div>
+          <div className="affiliation-primary">
+            <a href="https://bridgegenai.org/" className="affiliation-card affiliation-bridge"><span className="affiliation-orbit affiliation-orbit-one" aria-hidden="true" /><span className="affiliation-logo"><img src="/affiliations/bridge.svg" alt="" /><strong>BRIDGE <small>GenAI Lab</small></strong></span><span className="affiliation-role"><i>01</i> Head of AI Engineering <b aria-hidden="true">↗</b></span></a>
+            <a href="https://www.bidmc.org/" className="affiliation-card"><span className="affiliation-orbit affiliation-orbit-two" aria-hidden="true" /><span className="affiliation-logo"><img src="/affiliations/bidmc.svg" alt="Beth Israel Deaconess Medical Center" /></span><span className="affiliation-role"><i>02</i> Postdoctoral research <b aria-hidden="true">↗</b></span></a>
+            <a href="https://hms.harvard.edu/" className="affiliation-card affiliation-hms"><span className="affiliation-orbit affiliation-orbit-three" aria-hidden="true" /><span className="affiliation-logo affiliation-text"><strong>Harvard Medical School</strong></span><span className="affiliation-role"><i>03</i> Research fellow <b aria-hidden="true">↗</b></span></a>
+          </div>
+          <div className="affiliation-history"><div className="affiliation-history-copy"><span className="affiliation-history-index">EARLIER CHAPTERS</span><h3>Training and research<br />across Israel.</h3><p>Medical education and collaborations that shaped the work.</p></div><div className="affiliation-history-logos">
+            <a href="https://www.biu.ac.il/en"><img src="/affiliations/bar-ilan.svg" alt="" /><span><b>Bar-Ilan</b><small>MD · Medicine</small></span><i aria-hidden="true">↗</i></a>
+            <a href="https://www.rambam.org.il/en/"><img src="/affiliations/rambam.svg" alt="" /><span><b>Rambam</b><small>Clinical research</small></span><i aria-hidden="true">↗</i></a>
+            <a href="https://www.technion.ac.il/en/"><img src="/affiliations/technion.png" alt="" /><span><b>Technion</b><small>Research collaboration</small></span><i aria-hidden="true">↗</i></a>
+          </div></div>
+          <div className="affiliation-endnote"><span>ONE CONTINUOUS QUESTION</span><b>How can technology support better care?</b><span className="affiliation-endnote-signal" aria-hidden="true">···</span></div>
         </div>
-        <div className="affiliation-history"><div><h3>Earlier training &amp; research</h3><p>Medical education and research in Israel.</p></div><div className="affiliation-history-logos">
-          <a href="https://www.biu.ac.il/en"><img src="/affiliations/bar-ilan.svg" alt="" /><span>Bar-Ilan University · MD</span></a>
-          <a href="https://www.rambam.org.il/en/"><img src="/affiliations/rambam.svg" alt="" /><span>Rambam Health Care Campus</span></a>
-          <a href="https://www.technion.ac.il/en/"><img src="/affiliations/technion.png" alt="" /><span>Technion</span></a>
-        </div></div>
       </section>
 
       <section className="editorial-about section-shell" id="about" data-motion-reveal>
@@ -171,7 +176,7 @@ export default function Home() {
 
       <section className="editorial-research" id="research"><div className="section-shell"><div className="editorial-section-head" data-motion-reveal><p className="section-index">Research focus</p><h2>From signals<br /><em>to decisions.</em></h2><p>Exploring how intelligent systems can extend human capability while remaining accountable to the people who use them.</p></div><div className="research-index" data-motion-reveal>{focusAreas.map((area, index)=><a href={area.href} key={area.title} target="_blank" rel="noreferrer"><div className="research-art"><ResearchGlyph kind={["literas", "neuro-copilot", "inspire"][index]} /></div><span className="research-index-number">0{index+1} / RESEARCH AREA</span><div><h3>{area.title}</h3><p>{area.text}</p></div><span className="research-index-arrow" aria-hidden="true">↗</span></a>)}</div><div className="editorial-guides">{researchPages.map(page=><a href={`/research/${page.slug}/`} key={page.slug}>{page.title} ↗</a>)}</div></div></section>
 
-      <section className="editorial-projects section-shell" id="projects"><div className="editorial-section-head" data-motion-reveal><p className="section-index">Research projects</p><h2>Ideas into<br /><em>practice.</em></h2><p>Tools and benchmarks built with collaborators to investigate clinical AI and neurological care.</p></div><div className="editorial-project-list">{projectDetails.map((project,index)=><a href={`/projects/${project.slug}/`} className="editorial-project" key={project.slug} data-motion-reveal><span className="project-number">0{index+1}</span><div className="editorial-project-title"><h3>{project.shortName}</h3><span>Research project</span></div><p>{project.summary}</p><span className="editorial-arrow" aria-hidden="true">↗</span></a>)}</div><a className="signal-link" href="/projects/">All projects and public code ↗</a></section>
+      <section className="editorial-projects section-shell" id="projects"><div className="editorial-section-head" data-motion-reveal><p className="section-index">Research projects</p><h2>Ideas into<br /><em>practice.</em></h2><p>Tools and benchmarks built with collaborators to investigate clinical AI and neurological care.</p></div><div className="editorial-project-list">{projectDetails.map((project,index)=><a href={`/projects/${project.slug}/`} className="editorial-project" key={project.slug} data-motion-reveal><span className="project-number">0{index+1}</span><div className="editorial-project-figure"><ProjectFigure kind={project.slug} compact /></div><div className="editorial-project-title"><h3>{project.shortName}</h3><span>Research project</span><p>{project.summary}</p></div><span className="editorial-arrow" aria-hidden="true">↗</span></a>)}</div><a className="signal-link" href="/projects/">All projects and public code ↗</a></section>
 
       <section className="editorial-study section-shell" id="work"><div><p className="section-index">In focus · Neurocritical care</p><h2>The unsteady return of command-following</h2></div><div><p>A study of recovery after acute brain injury and the clinical context that shapes bedside interpretation.</p><a href="https://link.springer.com/article/10.1007/s12028-026-02624-x" className="signal-link">Read the study ↗</a></div></section>
 
