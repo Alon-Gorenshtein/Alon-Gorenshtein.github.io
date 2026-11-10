@@ -979,10 +979,10 @@ body { overflow-x:clip; }
 .affiliation-card:not(.affiliation-bridge) .affiliation-logo img { max-width:100%; }
 .affiliation-card:nth-child(2) .affiliation-logo img { width:min(100%,250px); }
 .affiliation-card:nth-child(2) .affiliation-logo img { filter:brightness(0) invert(1); opacity:.94; }
-.affiliation-hms .affiliation-logo img { width:min(100%,280px); height:auto; max-height:68px; object-fit:contain; filter:none; opacity:1; }
+.affiliation-hms .affiliation-logo img { width:min(100%,230px); height:auto; max-height:58px; object-fit:contain; filter:none; opacity:1; }
 .affiliation-text { display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:4px; color:#fff; font:400 1.45rem/1.05 var(--serif); letter-spacing:.015em; }
 .affiliation-text strong { color:#f6f4e9; font:600 1.15rem/1.25 var(--sans); letter-spacing:0; }
-.affiliation-role { position:relative; z-index:1; display:flex; align-items:center; gap:11px; width:100%; margin-top:auto; padding-top:18px; color:#f0f7f3; border-top:1px solid rgba(182,219,211,.25); font-size:.78rem; }
+.affiliation-role { position:relative; z-index:1; display:flex; align-items:center; gap:11px; width:100%; margin-top:auto; padding-top:18px; color:#f7fbf9; border-top:1px solid rgba(182,219,211,.25); font-size:.82rem; font-weight:500; }
 .affiliation-role i { color:var(--affiliation-accent); font-size:.63rem; font-style:normal; letter-spacing:.08em; }
 .affiliation-role b { margin-left:auto; color:var(--affiliation-accent); font-size:1rem; transition:transform .2s; }
 .affiliation-card:hover .affiliation-role b { transform:translate(3px,-3px); }
@@ -1033,7 +1033,7 @@ body { overflow-x:clip; }
  .affiliation-card { min-height:135px; padding:19px; }
  .affiliation-logo { min-height:56px; }
  .affiliation-bridge .affiliation-logo img { width:48px; height:48px; }
- .affiliation-hms .affiliation-logo img { width:min(100%,250px); max-height:58px; }
+ .affiliation-hms .affiliation-logo img { width:min(100%,210px); max-height:54px; }
  .affiliation-role { padding-top:12px; }
  .affiliation-history { grid-template-columns:1fr; gap:22px; margin-top:34px; }
  .affiliation-history-logos { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
