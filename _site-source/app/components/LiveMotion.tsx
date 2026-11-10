@@ -15,7 +15,18 @@ export default function LiveMotion() {
       : null;
     const canObserve = typeof window.IntersectionObserver === "function";
     const canAnimate = typeof window.requestAnimationFrame === "function";
-    const revealElements = Array.from(document.querySelectorAll<HTMLElement>(REVEAL_SELECTOR));
+    const revealSelector = [
+      REVEAL_SELECTOR,
+      ".research-page > article > section",
+      ".research-page .research-guide-grid > .research-guide",
+      ".research-page .bibliography-entry",
+      ".research-page .publication-result",
+      ".he-section",
+      ".he-detail .bibliography-entry",
+      ".he-detail article > section",
+    ].join(",");
+    const revealElements = Array.from(document.querySelectorAll<HTMLElement>(revealSelector));
+    revealElements.forEach((element) => element.setAttribute("data-motion-reveal", ""));
     const hero = document.querySelector<HTMLElement>(".signal-hero");
     const finePointer = pointerQuery?.matches ?? false;
     let motionReduced = motionQuery?.matches ?? true;
@@ -89,7 +100,7 @@ export default function LiveMotion() {
             revealObserver?.unobserve(entry.target);
           });
         },
-        { threshold: 0.14, rootMargin: "0px 0px -8% 0px" },
+        { threshold: 0, rootMargin: "0px 0px -8% 0px" },
       );
       root.classList.add("motion-ready");
       revealElements.forEach((element) => {
