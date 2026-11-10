@@ -1,7 +1,7 @@
 import SiteHeader from "../components/SiteHeader";
 import type { Metadata } from "next";
 import projects from "../lib/projects.json";
-import ResearchGlyph from "../components/ResearchGlyph";
+import ProjectFigure from "../components/ProjectFigure";
 import { projectDetails } from "../lib/project-details";
 import { SITE_URL, PERSON_ID, jsonLd } from "../lib/identity";
 const title = "Research projects and software | Alon Gorenshtein, MD";
@@ -18,7 +18,7 @@ export default function Projects() {
       <p className="eyebrow">RESEARCH SOFTWARE · ALON GORENSHTEIN, MD</p><h1>From papers<br/>to public code.</h1>
       <p className="research-page-intro">Research projects in clinical AI, evidence synthesis, and neurology, developed by Alon Gorenshtein and collaborators.</p>
       <h2>Featured projects</h2>
-      <div className="research-guide-grid project-index-grid">{projectDetails.map(p => <a className="research-guide" href={`/projects/${p.slug}/`} key={p.slug}><div className="index-glyph"><ResearchGlyph kind={p.slug} /></div><h3>{p.shortName}</h3><p>{p.summary}</p><span className="text-link">Project details →</span></a>)}</div>
+      <div className="research-guide-grid project-index-grid">{projectDetails.map(p => <a className="research-guide" href={`/projects/${p.slug}/`} key={p.slug}><div className="index-glyph"><ProjectFigure kind={p.slug} compact /></div><h3>{p.shortName}</h3><p>{p.summary}</p><span className="text-link">Project details →</span></a>)}</div>
       <h2>Research software and public code</h2>
       <p>Each project links its public code to the corresponding article or preprint. Repository documentation provides the requirements for reuse, including licenses, dependencies, and any separately controlled data access.</p>
       {projects.map(p => <article className="bibliography-entry" id={p.slug} key={p.slug}><span className={`publication-status${p.status === "Preprint" ? " publication-status-preprint" : ""}`}>{p.status}</span><h2>{p.name}</h2><p>{p.description}</p><p>{p.context}</p><p className="bibliography-actions"><a href={p.repo}>View public code ↗</a><a href={`https://doi.org/${p.doi}`}>Read the {p.status === "Preprint" ? "preprint" : "paper"} ↗</a><a href={`/publications/#${p.slug}`}>Citation →</a></p></article>)}
