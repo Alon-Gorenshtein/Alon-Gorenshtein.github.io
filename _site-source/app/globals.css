@@ -710,3 +710,55 @@ body { overflow-x:clip; }
 .site-header .language-link { color:#eef8f5; }
 .research-page-header { background:#0b222b; color:#eef8f5; border-color:#38545a; min-height:76px; padding:24px max(6vw,24px); align-items:center; }
 .research-page-header a:hover { color:#9de2d7; }
+
+/* Interactive blueprint: real research areas, direct links, and a quiet instrument. */
+.signal-hero-inner { grid-template-columns:minmax(0,1fr) minmax(300px,.42fr); gap:0 5%; }
+.signal-hero-aside { align-items:stretch; gap:36px; }
+.signal-portrait { align-self:flex-end; width:min(100%,170px); }
+.research-instrument { color:#edf8f4; border:1px solid rgba(173,225,217,.46); background:rgba(7,27,35,.72); backdrop-filter:blur(12px); }
+.instrument-header { display:flex; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid rgba(173,225,217,.3); color:#c3ded6; font-size:.68rem; font-weight:700; letter-spacing:.07em; }
+.instrument-display { position:relative; min-height:210px; padding:16px; overflow:hidden; }
+.instrument-display svg { width:100%; height:95px; display:block; overflow:visible; }
+.instrument-path { fill:none; stroke:#84b9b2; stroke-width:1; opacity:.75; }
+.instrument-node { fill:#0b222b; stroke:#a6e4d7; stroke-width:2; transition:fill .3s, filter .3s; }
+.instrument-core { fill:none; stroke:#9bdbce; stroke-width:1; opacity:.6; }
+.instrument-safety .node-safety, .instrument-neurotech .node-neurotech, .instrument-critical .node-critical { fill:#b2f3e3; filter:drop-shadow(0 0 6px #8be9d8); }
+.instrument-copy strong { font:400 1.35rem/1.1 var(--serif); }
+.instrument-copy p { color:#c5ddd6; font-size:.82rem; line-height:1.5; margin:8px 0 10px; }
+.instrument-copy a { color:#a6e9d9; font-size:.78rem; border-bottom:1px solid #77bdb0; padding-bottom:3px; }
+.instrument-controls { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid rgba(173,225,217,.3); }
+.instrument-controls button { min-height:52px; border:0; border-right:1px solid rgba(173,225,217,.3); padding:10px 7px; background:transparent; color:#c5ddd6; cursor:pointer; font:600 .7rem/1.3 var(--sans); transition:background .2s,color .2s; }
+.instrument-controls button:last-child { border-right:0; }
+.instrument-controls button:hover, .instrument-controls button[aria-pressed="true"] { background:#c4f0e3; color:#102b30; }
+.hero-light { transform:translate3d(calc(var(--pointer-x, 0) * 14px),calc(var(--pointer-y, 0) * 10px),0); transition:transform .65s ease-out; }
+.signal-hero.is-pointer-active .hero-light { transition:transform .12s linear; }
+@media (prefers-reduced-motion:no-preference) { .instrument-core { transform-origin:224px 57px; animation:instrument-pulse 3.8s ease-in-out infinite; } @keyframes instrument-pulse { 0%,100% { transform:scale(.85); opacity:.35; } 50% { transform:scale(1.15); opacity:.8; } } }
+@media (prefers-reduced-motion:reduce) { .hero-light { transform:none; transition:none; } .instrument-node, .instrument-controls button { transition:none; } }
+@media (max-width:760px) { .signal-hero-inner { grid-template-columns:1fr; } .signal-hero-aside { display:grid; grid-template-columns:minmax(0,1fr); gap:25px; } .signal-portrait { justify-self:start; width:120px; } .research-instrument { width:100%; } .instrument-display { min-height:0; } .hero-index { margin-top:0; } }
+@media (min-width:761px) {
+ .signal-hero-inner { padding-top:clamp(55px, 6vw, 88px); }
+ .signal-hero-aside { gap:18px; }
+ .signal-portrait { width:110px; }
+ .signal-portrait figcaption { font-size:.69rem; margin-top:8px; }
+ .instrument-display { min-height:0; padding:12px 14px; }
+ .instrument-display svg { height:58px; }
+ .instrument-copy p { margin:5px 0 7px; }
+ .instrument-controls button { min-height:44px; }
+ .hero-index { margin-top:55px; }
+}
+/* Research explorer: each choice leads from a real question to published work. */
+.instrument-controls { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); border-top:0; border-bottom:1px solid rgba(173,225,217,.3); }
+.instrument-controls button { display:flex; align-items:center; gap:8px; text-align:left; min-height:44px; font-size:.74rem; border-bottom:1px solid rgba(173,225,217,.22); }
+.instrument-controls button span { font-size:.65rem; opacity:.7; }
+.instrument-display { min-height:0; padding:17px; }
+.instrument-label { color:#add2c9; font-size:.65rem; letter-spacing:.08em; font-weight:700; }
+.instrument-question { font:400 1.13rem/1.25 var(--serif); color:#f1faf6; margin:7px 0 15px; }
+.instrument-evidence { border-left:2px solid #8fd9ca; padding-left:10px; margin-bottom:15px; }
+.instrument-evidence a { display:block; color:#eef8f5; font-size:.78rem; line-height:1.4; margin-top:5px; }
+.instrument-explore { color:#a6e9d9; font-size:.78rem; font-weight:650; border-bottom:1px solid #77bdb0; padding-bottom:4px; }
+.identity-links { display:flex; flex-wrap:wrap; gap:15px 22px; }
+@media (min-width:761px) { .signal-hero-inner { padding-top:50px; } .signal-portrait { width:100px; } .signal-hero-aside { gap:12px; } .hero-index { margin-top:35px; } }
+.instrument-header, .instrument-label { font-size:.75rem; }
+.instrument-controls button { font-size:.83rem; min-height:48px; }
+.instrument-controls button span { font-size:.75rem; }
+.instrument-evidence a, .instrument-explore { font-size:.85rem; }

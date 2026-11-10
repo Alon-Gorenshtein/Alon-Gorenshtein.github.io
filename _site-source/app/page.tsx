@@ -5,6 +5,7 @@ import { projectDetails } from "./lib/project-details";
 import LiveMotion from "./components/LiveMotion";
 import SiteHeader from "./components/SiteHeader";
 import ResearchGlyph from "./components/ResearchGlyph";
+import ResearchInstrument from "./components/ResearchInstrument";
 
 const focusAreas = [
   {
@@ -148,14 +149,14 @@ export default function Home() {
             <h1>Alon<br /><span>Gorenshtein</span><small>, MD</small></h1>
             <div className="signal-hero-bottom"><p>Building and studying AI for the moments that matter in medicine.</p><a href="#research" className="signal-link">Explore the research <span>↘</span></a></div>
           </div>
-          <div className="signal-hero-aside"><figure className="signal-portrait"><img src="/alon-portrait.png" alt="Alon Gorenshtein" /><figcaption>Physician-scientist<br />Harvard Medical School · BIDMC</figcaption></figure><div className="signal-trace" aria-hidden="true"><svg viewBox="0 0 600 100" preserveAspectRatio="none"><path d="M0 53 H110 l12 -5 10 12 16 -34 12 56 14 -39 10 10 H260 l12 -6 10 12 14 -32 12 52 16 -37 10 11 H420 l12 -5 10 10 14 -24 12 37 14 -18 h118" /></svg><span>CLINICAL SIGNAL / HUMAN CONTEXT</span></div></div>
+          <div className="signal-hero-aside"><figure className="signal-portrait"><img src="/alon-portrait.png" alt="Alon Gorenshtein" /><figcaption>Physician-scientist<br />Harvard Medical School · BIDMC</figcaption></figure><ResearchInstrument /></div>
           <div className="hero-index"><span>RESEARCH AREAS</span><span>CLINICAL AI</span><span>NEUROLOGY</span><span>NEUROTECHNOLOGY</span><a href="#about">SCROLL TO EXPLORE ↓</a></div>
         </div>
       </section>
 
       <section className="editorial-about section-shell" id="about" data-motion-reveal>
         <div><p className="section-index">About</p><h2>Medicine is<br /><em>human work.</em></h2></div>
-        <div className="editorial-about-copy"><p className="editorial-lead">I’m a physician-scientist and AI engineer working at the intersection of neurology, clinical research, and machine intelligence.</p><p>At Harvard Medical School and Beth Israel Deaconess Medical Center, I study how AI systems can support clinical judgment, how we evaluate them, and how they behave in real-world settings. I also lead AI engineering at BRIDGE GenAI Lab.</p><a className="signal-link" href="https://bridgegenai.org/">Discover BRIDGE GenAI Lab ↗</a></div>
+        <div className="editorial-about-copy"><p className="editorial-lead">I’m Alon Gorenshtein (אלון גורנשטיין), a physician-scientist and AI engineer working at the intersection of neurology, clinical research, and machine intelligence.</p><p>At Harvard Medical School and Beth Israel Deaconess Medical Center, I study how AI systems can support clinical judgment, how we evaluate them, and how they behave in real-world settings. I also lead AI engineering at BRIDGE GenAI Lab.</p><div className="identity-links"><a className="signal-link" href="https://bridgegenai.org/">Discover BRIDGE GenAI Lab ↗</a><a className="signal-link" href="https://connects.catalyst.harvard.edu/Profiles/display/Person/227389">Harvard profile ↗</a><a className="signal-link" href="/he/" lang="he" dir="rtl">האתר בעברית ←</a></div></div>
       </section>
 
       <section className="editorial-research" id="research"><div className="section-shell"><div className="editorial-section-head" data-motion-reveal><p className="section-index">Research focus</p><h2>From signals<br /><em>to decisions.</em></h2><p>Exploring how intelligent systems can extend human capability while remaining accountable to the people who use them.</p></div><div className="research-index" data-motion-reveal>{focusAreas.map((area, index)=><a href={area.href} key={area.title} target="_blank" rel="noreferrer"><span className="research-index-number">0{index+1}</span><div><h3>{area.title}</h3><p>{area.text}</p></div><span className="research-index-arrow" aria-hidden="true">↗</span></a>)}</div><div className="editorial-guides">{researchPages.map(page=><a href={`/research/${page.slug}/`} key={page.slug}>{page.title} ↗</a>)}</div></div></section>

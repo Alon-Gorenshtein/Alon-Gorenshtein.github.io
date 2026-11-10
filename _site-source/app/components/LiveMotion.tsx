@@ -16,7 +16,7 @@ export default function LiveMotion() {
     const canObserve = typeof window.IntersectionObserver === "function";
     const canAnimate = typeof window.requestAnimationFrame === "function";
     const revealElements = Array.from(document.querySelectorAll<HTMLElement>(REVEAL_SELECTOR));
-    const hero = document.querySelector<HTMLElement>(".hero-system");
+    const hero = document.querySelector<HTMLElement>(".signal-hero");
     const finePointer = pointerQuery?.matches ?? false;
     let motionReduced = motionQuery?.matches ?? true;
     let revealObserver: IntersectionObserver | null = null;
